@@ -1,0 +1,42 @@
+.header {
+    height: 600px;
+    background-color: #FFF6F2;
+}
+
+.line {
+    border-left: 2px solid black;
+    height: 20px;
+    margin-top: 12px;
+}
+
+.spaceNavbar {
+    width: 450px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #FA7436;
+}
+
+.containerRight {
+    margin-left: 80px;
+    margin-top: 60px;
+    width: 400px;
+}
+
+.containerLeft {
+    margin-left: 80px;
+    margin-top: 130px;
+    width: 400px;
+}
+
+.buttonContainer {
+    margin-left: 80px;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: content-box;
+    color: white;
+    border-radius: 10%;
+    display: block;
+    border: none;
+    background-color: #FA7436;
+}
