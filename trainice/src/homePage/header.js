@@ -15,7 +15,7 @@ function Header() {
         <div className="header">
             {/* NAVBAR AWAL*/}
             <nav class="navbar navbar-expand-lg ">
-                <div class="container-fluid ">
+                <div class="container-fluid mt-3">
                     <a class="navbar-brand me-5 ms-5" href="#"><img src={logo} alt='logo' /></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -49,13 +49,13 @@ function Header() {
                                 <a class="nav-link" href="#"><img src={england} alt="england" width="20px" />
                                 </a>
                             </li>
-                            <li class="nav-item me-4">
+                            <li class="nav-item ">
                                 <a class="nav-link" href="#"><img src={night} alt="england" width="20px" />
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle ms-5 text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src={profil} alt="profil" />
+                                    <img src={profil} alt="profil" width="30px" class="me-2" />
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="#"><img class="me-2" src={profil} alt="profil" />Profil saya</a></li>
