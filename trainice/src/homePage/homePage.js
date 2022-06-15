@@ -8,7 +8,6 @@ function homePage() {
             <Header />
             <Content />
             <Footer />
-
         </div>
     )
 }
