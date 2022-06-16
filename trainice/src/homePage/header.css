@@ -40,3 +40,17 @@
     border: none;
     background-color: #FA7436;
 }
+
+@media only screen and (max-width : 480px) {
+    .containerRight {
+        margin-left: 80px;
+        margin-top: 60px;
+        width: 50%;
+    }
+
+    .containerLeft {
+        margin-left: 80px;
+        margin-top: 130px;
+        width: 50%;
+    }
+}
