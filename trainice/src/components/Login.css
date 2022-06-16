@@ -1,0 +1,127 @@
+* {
+  font-family: "Poppins";
+}
+body {
+  max-width: 95rem;
+  height: 100vh;
+}
+#loginKanan {
+  background-color: #fff6f2;
+  height: 100vh;
+}
+h1.title {
+  color: #fa7436;
+  font-family: "Fredoka One";
+  margin-bottom: 5vh;
+}
+#loginButton {
+  background-color: #fa7436;
+  border: none;
+  border-radius: 5px;
+  width: 24.5vw;
+  height: 4.7vh;
+  margin-bottom: 2vh;
+}
+form {
+  position: relative;
+  left: 15vw;
+  top: 15vh;
+}
+.lupaPassword {
+  position: absolute;
+  left: 15.5vw;
+  bottom: 28vh;
+  text-decoration-line: none;
+  color: black;
+}
+p.login {
+  position: relative;
+  left: 7vh;
+}
+img.login {
+  padding: 50vh;
+}
+a.daftar {
+  text-decoration-line: none;
+  color: #fa7436;
+  margin-left: 0.3vw;
+}
+p.atau {
+  position: relative;
+  left: 10.7vw;
+}
+button.loginGoogle,
+button.loginFacebook {
+  background-color: white;
+  border: 2px solid #fa7436;
+  border-radius: 5px;
+  width: 24.5vw;
+  height: 4.7vh;
+  margin-bottom: 1vh;
+}
+
+img.facebook,
+img.google {
+  position: relative;
+  bottom: 0.3vh;
+  margin-right: 0.4vw;
+}
+
+.daftar:hover,
+.lupaPassword:hover {
+  color: #dd6229;
+}
+
+button:hover,
+#loginButton:hover {
+  background-color: #fa7436;
+  color: white;
+}
+
+#imgCover {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+@media only screen and (max-width: 800px) {
+  #imgCover,
+  #loginKanan {
+    display: none;
+  }
+  form {
+    position: absolute;
+    left: 20vw;
+    top: 10vh;
+    width: 120vw;
+  }
+  button.loginGoogle,
+  button.loginFacebook {
+    background-color: white;
+    border: 2px solid #fa7436;
+    border-radius: 5px;
+    width: 60vw;
+    height: 4.7vh;
+    margin-bottom: 1vh;
+  }
+  p.atau {
+    position: relative;
+    left: 28vw;
+  }
+  #loginButton {
+    background-color: #fa7436;
+    border: none;
+    border-radius: 5px;
+    width: 60vw;
+    height: 4.7vh;
+    margin-bottom: 2vh;
+  }
+  .lupaPassword {
+    position: absolute;
+    left: 39vw;
+    bottom: 30.5vh;
+    text-decoration-line: none;
+    color: black;
+  }
+}
