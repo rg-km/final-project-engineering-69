@@ -10,7 +10,7 @@ function Content() {
     return (
         <div>
             {/* KONTEN PERTAMA */}
-            <div class="row ">
+            {/* <div class="row ">
                 <div class="col">
                     <img src={contenLeft} class="mt-lg-5" />
                 </div>
@@ -62,7 +62,7 @@ function Content() {
                     </div>
 
                 </div>
-            </div>
+            </div> */}
 
             {/* KONTEN KEDUA */}
             <div className="contentKedua">

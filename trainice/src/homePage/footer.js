@@ -47,14 +47,8 @@ function footer() {
                         <p>Blog</p>
                         <p>Pusat Bantuan</p>
                         <p>Visi Misi</p>
-
-
-
-
-
                     </div>
                 </div>
-
             </div>
         </div>
     )
