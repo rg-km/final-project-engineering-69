@@ -37,20 +37,6 @@ function Login() {
             <button variant="primary" type="submit" className="btn" id="loginButton">
               Masuk
             </button>
-            <p className="atau">Atau</p>
-            <a href="#">
-              <button className="loginGoogle">
-                <img src={Google} width="20" height="20" className="google" />
-                Masuk dengan Google
-              </button>
-            </a>
-            <br />
-            <a href="#">
-              <button className="loginFacebook">
-                <img src={Facebook} width="20" height="20" className="facebook" />
-                Masuk dengan Facebook
-              </button>
-            </a>
             <p className="login">
               Sudah punya akun?
               <a href="#" className="daftar">

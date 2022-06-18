@@ -25,12 +25,12 @@ h1.title {
 form {
   position: relative;
   left: 15vw;
-  top: 15vh;
+  top: 20vh;
 }
 .lupaPassword {
   position: absolute;
   left: 15.5vw;
-  bottom: 28vh;
+  bottom: 11.5vh;
   text-decoration-line: none;
   color: black;
 }
@@ -50,15 +50,6 @@ p.atau {
   position: relative;
   left: 10.7vw;
 }
-button.loginGoogle,
-button.loginFacebook {
-  background-color: white;
-  border: 2px solid #fa7436;
-  border-radius: 5px;
-  width: 24.5vw;
-  height: 4.7vh;
-  margin-bottom: 1vh;
-}
 
 img.facebook,
 img.google {
@@ -72,7 +63,6 @@ img.google {
   color: #dd6229;
 }
 
-button:hover,
 #loginButton:hover {
   background-color: #fa7436;
   color: white;
@@ -95,15 +85,6 @@ button:hover,
     left: 20vw;
     top: 10vh;
     width: 120vw;
-  }
-  button.loginGoogle,
-  button.loginFacebook {
-    background-color: white;
-    border: 2px solid #fa7436;
-    border-radius: 5px;
-    width: 60vw;
-    height: 4.7vh;
-    margin-bottom: 1vh;
   }
   p.atau {
     position: relative;
