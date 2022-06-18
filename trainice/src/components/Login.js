@@ -1,7 +1,5 @@
 import "./Login.css";
 import Img from "./assets/login.png";
-import Facebook from "./assets/facebook.png";
-import Google from "./assets/google.png";
 
 function Login() {
   return (
