@@ -1,0 +1,62 @@
+.contentRight {
+    margin: 50px 0 50px 0;
+    font-weight: bold;
+    color: #FA7436;
+}
+
+.contentKedua {
+    background-color: white;
+    height: 600px;
+}
+
+.contentKedua h2 {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    padding-top: 50px;
+}
+
+.contentKedua h2 span {
+    color: #FA7436;
+}
+
+.contentKedua p {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contentKedua .gambar {
+    margin: 100px 0 0 130px;
+}
+
+.kataMereka {
+    display: block;
+    width: 90%;
+    margin: 50px auto 0 auto;
+}
+
+.box {
+    background-color: #FA7436;
+    width: 60%;
+    height: fit-content;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* .box .mulai {
+    width: 30%;
+    border: 1px solid #fdd2be;
+    padding: 10px 50px 10px 10px;
+} */
+.box .row .col .btn {
+    color: white;
+    border: 1px solid white;
+}
+
+.box .row .col .btn .bg-white {
+    color: black;
+}
+
+.box .row {
+    padding: 80px 80px 80px 80px;
+}
