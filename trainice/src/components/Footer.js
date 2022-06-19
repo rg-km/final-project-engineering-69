@@ -18,35 +18,31 @@ function Footer() {
             <h5 class="mt-5">Ikuti kami</h5>
             <img src={instagram} alt="logo" />
             <img src={facebook} alt="logo" />
-            <img src={youtube} alt="logo" />
+            <img src={youtube} alt="logo" className="me-2" />
             <img src={linkedin} alt="logo" />
             <h5 class="mt-4">Hubungi kami</h5>
-            <img src={whatsapp} alt="logo" />
-            <img src={mail} alt="logo" />
+            <img src={whatsapp} alt="logo" className="me-2" />
+            <img src={mail} alt="logo" className="me-2" />
             <img src={phone} alt="logo" />
-            <h5 class="mt-4">Alamat kami</h5>
-            <p>
+            <h5 class="mt-5">Alamat kami</h5>
+            <p className="alamat">
               Jl. Cendrawasih, SCBD, Senayan,
               <br /> Kebayoran Baru, Jakarta Selatan
             </p>
           </div>
           <div class="col text-white mt-5">
-            <h5>Bahasa Kelas Reguler</h5>
-            <p>inggris</p>
-            <h5>Bahasa Kelas Anak</h5>
-            <p>inggris</p>
-            <h5>Bahasa Kelas Karyawan</h5>
-            <p>inggris</p>
             <h5>Bahasa Kelas Gratis</h5>
             <p>inggris</p>
           </div>
           <div class="col text-white mt-5">
-            <h4>Tentang Trainice</h4>
-            <p>Tentang kami</p>
-            <p>Berita dan Media</p>
-            <p>Blog</p>
-            <p>Pusat Bantuan</p>
-            <p>Visi Misi</p>
+            <h4 className="mb-3">Tentang Trainice</h4>
+            <div className="tentangTrainice">
+              <p>Tentang kami</p>
+              <p>Berita dan Media</p>
+              <p>Blog</p>
+              <p>Pusat Bantuan</p>
+              <p>Visi Misi</p>
+            </div>
           </div>
         </div>
       </div>
