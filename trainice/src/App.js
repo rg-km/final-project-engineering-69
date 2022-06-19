@@ -1,10 +1,13 @@
 import './App.css';
-import Registration from './Registration';
+import Footer from './components/Footer';
+import Kelas from './components/Kelas';
+import Registration from './components/Registration';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Registration /> 
+      <Kelas />
     </div>
   );
 }

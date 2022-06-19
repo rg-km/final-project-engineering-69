@@ -1,0 +1,26 @@
+.header {
+    background-color: #FFF6F2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.spaceNavbar{
+    width: 670px;
+}
+
+.header li a{
+    color: black;
+}
+
+.header li a:hover{
+    background-color: #fd9869;
+    color:white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #FA7436;
+}
+ 
