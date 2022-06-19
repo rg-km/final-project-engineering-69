@@ -1,0 +1,108 @@
+* {
+  --lightOrange: #fff6f2;
+  --orange: #fa7436;
+  --grey: #5a6371;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.forgot-container {
+  /* background-color: rgb(78, 255, 19); */
+  display: flex;
+  width: 100%;
+  height: 800px;
+}
+
+.left-container {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-content {
+  width: 80%;
+}
+
+#title {
+  color: var(--orange);
+  font-family: "Fredoka One", cursive;
+  font-size: 42px;
+  margin-bottom: 120px;
+}
+
+.password-title h3 {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.password-title p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--grey);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+form {
+  text-align: center;
+}
+
+p.email {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--grey);
+  margin-left: 75px;
+}
+
+input.email-box {
+  width: 456px;
+  height: 25px;
+  background-color: #f7f7f7;
+  border: 1px solid #f4f4f5;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+input#submit {
+  width: 456px;
+  height: 32px;
+  background-color: var(--orange);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+p.description {
+  font-size: 16px;
+  font-weight: 6 00;
+  color: var(--grey);
+  text-align: center;
+}
+
+p > a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.right-container {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightOrange);
+}
