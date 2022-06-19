@@ -3,15 +3,10 @@
 }
 
 .header {
-  height: 600px;
+  height: 10vh;
   background-color: #fff6f2;
 }
 
-.line {
-  border-left: 2px solid black;
-  height: 20px;
-  margin-top: 12px;
-}
 
 a.navTitle {
   color: #fa7436;
@@ -48,32 +43,9 @@ a.text-tentang {
   text-decoration-line: none;
   color: rgb(0, 0, 0);
 }
-.text {
-  transform: translate(9%, 30%);
-}
 
-.spaceNavbar {
-  width: 58vw;
-}
-
-.containerRight {
-  margin-left: 80px;
-  margin-top: 60px;
-  width: 400px;
-}
-
-.containerLeft {
-  margin-left: 80px;
-  margin-top: 130px;
-  width: 400px;
-}
-
-.buttonExplore {
-  padding: 10px;
-  color: #ffffff;
-  border-radius: 10px;
-  border: none;
-  background-color: #fa7436;
-  transform: translate(70%, 500%);
-  width: 7vw;
+#profile {
+  position: relative;
+  left: 64vw;
+  bottom: 3.5vh;
 }

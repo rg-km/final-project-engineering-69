@@ -37,11 +37,11 @@ function Header() {
                 </a>
               </li>
               <div className="spaceNavbar"></div>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown" id="profile">
                 <a className="nav-link dropdown-toggle ms-5 text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <img src={profil} alt="profil" width="30px" className="me-2" />
                 </a>
-                <ul className="dropdown-menu" id="profile" aria-labelledby="navbarDropdown">
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a className="dropdown-item" href="#">
                       <img className="me-2" src={profil} alt="profil" />
@@ -66,23 +66,7 @@ function Header() {
           </div>
         </div>
       </nav>
-      <div className="row ">
-        <div className="col">
-          <div className="text">
-            <h1 className="judul">Tentang Trainice</h1>
-            <p className="deskripsi">
-              Trainice adalah sebuah platform <br />
-              pendidikan dengan tujuan <br /> mencerdaskan anak bangsa
-            </p>
-          </div>
-          <button className="buttonExplore" type="button">
-            Explore
-          </button>
-        </div>
-        <div className="col">
-          <img className="containerRight" src={container} alt="container" width="400px" />
-        </div>
-      </div>
+
       {/* NAVBAR AKKHIR */}
     </div>
   );

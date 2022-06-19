@@ -11,7 +11,7 @@ import phone from "./assets/footer/Phone.svg";
 function Footer() {
   return (
     <div className="footer">
-      <div class="container mt-lg-5">
+      <div class="container">
         <div class="row align-items-start">
           <div class="col text-white mt-5">
             <img src={logo} alt="logo" />
