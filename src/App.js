@@ -1,6 +1,5 @@
 // import logo from './logo.svg';
-import HomePage from './components/homePage/homePage';
-import Room from './components/room/room';
+import Login from './components/login/Login';
 import './App.css';
 
 function App() {
@@ -8,7 +7,7 @@ function App() {
     <div >
       <div className='app'>
         {/* <HomePage /> */}
-        <Room />
+        <Login />
       </div>
 
 
