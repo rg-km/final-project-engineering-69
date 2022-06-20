@@ -1,0 +1,65 @@
+import Footer from "./Footer";
+import Header from "./Header";
+import "./EditProfile.css";
+import EditProfileImage from "./assets/EditProfile/EditProfileImage.svg";
+
+function EditProfile() {
+  return (
+    <>
+      <Header></Header>
+      <div className="edit-profile-container container-fluid">
+        <div className="edit-profile-content">
+          <div className="left-container">
+            <img src={EditProfileImage} />
+          </div>
+          <div className="mid-container">
+            <div className="mid-content">
+              <h5>Gustio Nusamba</h5>
+              <p>gusti2480@gmail.com</p>
+              <form>
+                <label for="name">Nama</label>
+                <br />
+                <input type="text" id="name" name="name" />
+                <br />
+                <label for="email">Email</label>
+                <br />
+                <input type="email" id="email" name="email" />
+                <br />
+                <label for="hp">No. HP</label>
+                <br />
+                <input type="number" id="hp" name="hp" />
+              </form>
+            </div>
+          </div>
+          <div className="right-container">
+            <div className="right-content">
+              <form>
+                <p id="gender">Gender</p>
+                <input type="radio" id="laki" name="gender" value="laki" />
+                <label for="laki">Laki-laki</label>
+                <input
+                  type="radio"
+                  id="perempuan"
+                  name="gender"
+                  value="perempuan"
+                />
+                <label for="perempuan">Perempuan</label>
+                <br />
+                <label for="password">Password</label>
+                <br />
+                <input type="password" id="password" name="password" />
+                <br />
+              </form>
+            </div>
+          </div>
+        </div>
+        <form>
+          <input type="submit" id="submit" value="Simpan Perubahan" />
+        </form>
+      </div>
+      <Footer></Footer>
+    </>
+  );
+}
+
+export default EditProfile;
