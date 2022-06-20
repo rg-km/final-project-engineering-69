@@ -36,16 +36,22 @@ function EditProfile() {
               <form>
                 <p id="gender">Gender</p>
                 <input type="radio" id="laki" name="gender" value="laki" />
-                <label for="laki">Laki-laki</label>
+                <label for="laki" class="gender-label">
+                  Laki-laki
+                </label>
                 <input
                   type="radio"
                   id="perempuan"
                   name="gender"
                   value="perempuan"
                 />
-                <label for="perempuan">Perempuan</label>
+                <label for="perempuan" class="gender-label">
+                  Perempuan
+                </label>
                 <br />
-                <label for="password">Password</label>
+                <label for="password" id="password-label">
+                  Password
+                </label>
                 <br />
                 <input type="password" id="password" name="password" />
                 <br />
@@ -53,9 +59,11 @@ function EditProfile() {
             </div>
           </div>
         </div>
-        <form>
-          <input type="submit" id="submit" value="Simpan Perubahan" />
-        </form>
+        <div className="form-submit">
+          <form>
+            <input type="submit" id="submit" value="Simpan Perubahan" />
+          </form>
+        </div>
       </div>
       <Footer></Footer>
     </>
