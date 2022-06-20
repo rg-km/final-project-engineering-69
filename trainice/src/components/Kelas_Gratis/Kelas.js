@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Kelas.css'
+import './Kelas.css'
 import Footer from './Footer'
 import Header from './Header'
 import Ok from "../assets/Ok.png";
@@ -16,14 +16,14 @@ const Kelas = () => {
               proses belajar bahasa inggris.
             </p>
             <div className='row'>
-              <ul className='col'>
-                <li><img src={Ok}/> Bisa diikuti oleh semua kalangan usia</li>
-                <li><img src={Ok}/> Grup discord untuk memulai percakapan</li>
-                <li><img src={Ok}/> Memilih tema yang cocok sesuai dengan passion kamu</li>
+              <ul className='col center'>
+                <li><img src={Ok} alt='logo ceklis'/> Bisa diikuti oleh semua kalangan usia</li>
+                <li><img src={Ok} alt='logo ceklis'/> Grup discord untuk memulai percakapan</li>
+                <li><img src={Ok} alt='logo ceklis'/> Memilih tema yang cocok sesuai dengan passion kamu</li>
               </ul>
-              <ul className='col'>
-                <li><img src={Ok}/> Bertemu dengan teman level pemula hingga expert</li>
-                <li><img src={Ok}/> Menambah relasi</li>
+              <ul className='col center'>
+                <li><img src={Ok} alt='logo ceklis'/> Bertemu dengan teman level pemula hingga expert</li>
+                <li><img src={Ok} alt='logo ceklis'/> Menambah relasi</li>
               </ul>
             </div>
           </div>
@@ -37,12 +37,12 @@ const Kelas = () => {
               </div>
               <div className='bottom'>
                 <ul>
-                  <li><img src={Ok}/> Musik</li>
-                  <li><img src={Ok}/> Internasional</li>
-                  <li><img src={Ok}/> Budaya Indonesia</li>
-                  <li><img src={Ok}/> Sport</li>
-                  <li><img src={Ok}/> Gmae</li>
-                  <li><img src={Ok}/> Dan lain-lain</li>
+                  <li><img src={Ok} alt='logo ceklis'/> Musik</li>
+                  <li><img src={Ok} alt='logo ceklis'/> Internasional</li>
+                  <li><img src={Ok} alt='logo ceklis'/> Budaya Indonesia</li>
+                  <li><img src={Ok} alt='logo ceklis'/> Sport</li>
+                  <li><img src={Ok} alt='logo ceklis'/> Game</li>
+                  <li><img src={Ok} alt='logo ceklis'/> Dan lain-lain</li>
                 </ul>
                 <button className='btn-tanya' type="button">Tanya Kami</button>
               </div>
@@ -60,7 +60,7 @@ const Kelas = () => {
             </div>
           </div>
         </div>
-        <Footer />
+      <Footer />
     </>
   )
 }

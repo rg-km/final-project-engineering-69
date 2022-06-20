@@ -1,4 +1,4 @@
-import '../Header.css'
+import './Header.css'
 import Trainice from "../assets/Trainice.png";
 import Profil from "../assets/profile.png";
 import Setting from "../assets/setting.png";
@@ -43,18 +43,15 @@ function Header() {
                 </div>
             </nav>
             <div className="hero-page row">
-            <div className="col-md-6">
-              <h2>Program Bahasa Inggris <br/><span>Gratis</span> Bagi Pemula <br/>Hingga Para Expert</h2>
-              <p>Memberikan pengalaman terbaik belajar bahasa Inggris secara gratis. Temukan teman berbicara bahasa inggrismu dan raih impianmu dengan belajar bahasa inggris secara gratis.</p>
-              <button className='btn-explore' type="button">Explore</button>
+                <div className="col-md-6">
+                    <h2>Program Bahasa Inggris <br/><span>Gratis</span> Bagi Pemula <br/>Hingga Para Expert</h2>
+                    <p>Memberikan pengalaman terbaik belajar bahasa Inggris secara gratis. Temukan teman berbicara bahasa inggrismu dan raih impianmu dengan belajar bahasa inggris secara gratis.</p>
+                    <button className='btn-explore' type="button">Explore</button>
+                </div>
+                <figure className="col-md-6">
+                    <img className="boy" src={Boy} alt="container"/>
+                </figure>
             </div>
-            <figure className="col-md-6">
-              <img className="boy" src={Boy} alt="container"/>
-            </figure>
-          </div>
-
-            
-            {/* NAVBAR AKKHIR */}
         </div>
     )
 }

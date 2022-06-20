@@ -1,13 +1,15 @@
-import '../Form.css'
+import './Form.css'
+import People from '../assets/people.png'
+import Trainice from '../assets/Trainice.png'
 
 const Registration = () => {
 
     return (
-        <div className='fluid-container row'>
+        <div className='fluid-container row wrap'>
             <div className='form-content-left col-md-6 col-12 py-5'>
                 <form className='form'>
                     <div className='form-group'>
-                        <img id='logo' src='/assets/Trainice.png'/>
+                        <img id='logo' src={Trainice} alt='Logo Trainice'/>
                         <div className='form-inputs'>
                             <label htmlFor='username' className='form-label'>
                                 Nama Lengkap
@@ -65,7 +67,7 @@ const Registration = () => {
                 </form>
             </div>
             <div className='pic col-md-6 col-12 py-5'>
-                    <img id="people" src='/assets/people.png' alt='people'/>
+                    <img id="people" src={People} alt='people'/>
             </div>
         </div>
         

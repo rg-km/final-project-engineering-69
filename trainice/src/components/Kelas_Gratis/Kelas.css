@@ -5,7 +5,7 @@
 
 .kontenKelas h2{
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-weight: bold;
 }
 
@@ -22,14 +22,17 @@
     text-align: left;
 }
 
-.btn-explore{
-    border: none;
-    margin-top: 10px;
-    padding: 8px 20px;
+.btn-explore,
+.btn-mulai{
+    border: white solid 1px;
     background-color: #FA7436;
-    color: white;
+    padding: 8px;
+    width: 130px;
     border-radius: 7px;
+    color: white;
+    margin-right: 10px;
 }
+
 
 span{
     color: #FA7436;
@@ -50,12 +53,14 @@ figure{
 
 .manfaat p{
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .manfaat li,
 .fasilitas li{
     list-style-type: none;
     text-align: left;
+    line-height: 3em;
 }
 
 .fasilitas{
@@ -110,23 +115,21 @@ figure{
     padding: 50px;
 }
 
-.btn-mulai{
-    border: white solid 1px;
-    background-color: #FA7436;
-    padding: 8px;
-    width: 130px;
-    border-radius: 7px;
-    color: white;
-    margin-right: 10px;
-}
-
 .btn-kontak{
-    border: none;
+    border: white solid 1px;
     background-color: white;
     color: #FA7436;
     padding: 8px;
+    width: 130px;
     margin-left: 10px;
     border-radius: 7px;
+}
+
+.btn-explore:hover,
+.btn-mulai:hover,
+.btn-kontak:hover{
+    background-color: #F7AD19;
+    color: white;
 }
 
 .grup-btn{

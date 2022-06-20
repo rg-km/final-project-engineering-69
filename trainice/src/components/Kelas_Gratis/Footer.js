@@ -1,4 +1,4 @@
-import "../Footer.css"
+import "./Footer.css"
 import Trainicep from "../assets/Trainicep.png";
 import Instagram from "../assets/Instagram.png";
 import Facebook from "../assets/Facebook F.png";
