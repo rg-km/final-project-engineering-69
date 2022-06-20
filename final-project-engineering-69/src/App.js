@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
-import HomePage from './homePage/homePage';
-import Room from './room/room';
+import HomePage from './components/homePage/homePage';
+import Room from './components/room/room';
 import './App.css';
 
 function App() {
