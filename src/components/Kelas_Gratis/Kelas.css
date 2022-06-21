@@ -1,0 +1,137 @@
+.kontenKelas{
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+}
+
+.kontenKelas h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.hero-page{
+    background-color: #FFF6F2;
+    text-align: left;
+    padding: 80px 110px;
+    margin: 0 auto;
+}
+
+.hero-page h2{
+    font-weight:bold;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.btn-explore,
+.btn-mulai{
+    border: white solid 1px;
+    background-color: #FA7436;
+    padding: 8px;
+    width: 130px;
+    border-radius: 7px;
+    color: white;
+    margin-right: 10px;
+}
+
+
+span{
+    color: #FA7436;
+}
+
+figure{
+    text-align: right;
+}
+
+.boy{
+    width: 60%;
+}
+
+.manfaat, .siap{
+    padding: 80px 110px;
+    background-color: #ffffff;
+}
+
+.manfaat p{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.manfaat li,
+.fasilitas li{
+    list-style-type: none;
+    text-align: left;
+    line-height: 3em;
+}
+
+.fasilitas{
+    background-color: #FFF6F2;
+    padding: 80px 110px;
+}
+
+.box{
+    width: 30%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(194, 194, 194, 0.75);
+}
+
+.top{
+    background-color: #FA7436;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.bottom{
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-tanya{
+    color: #F7AD19;
+    border-radius: 7px;
+    border: #F7AD19 solid 2px;
+    padding: 7px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.btn-tanya:hover{
+    background-color: #F7AD19;
+    color: white;
+}
+
+.kotak{
+    width: 70%;
+    margin: auto;
+    background-color: #FA7436;
+    border-radius: 10px;
+    color: white;
+    padding: 50px;
+}
+
+.btn-kontak{
+    border: white solid 1px;
+    background-color: white;
+    color: #FA7436;
+    padding: 8px;
+    width: 130px;
+    margin-left: 10px;
+    border-radius: 7px;
+}
+
+.btn-explore:hover,
+.btn-mulai:hover,
+.btn-kontak:hover{
+    background-color: #F7AD19;
+    color: white;
+}
+
+.grup-btn{
+    text-align: right;
+}
