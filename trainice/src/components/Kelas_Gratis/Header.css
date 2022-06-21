@@ -9,18 +9,28 @@
     width: 670px;
 }
 
+.logo{
+    margin-right: 20px;
+}
+
 .header li a{
     color: black;
 }
 
 .header li a:hover{
-    background-color: #fd9869;
+    background-color: #ff8b56;
     color:white;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
+}
+
+.dropdown-menu li{
+    width: 170px;
 }
 
 .dropdown-menu li a:hover {
-    background-color: #FA7436;
+    background-color: #ff8b56;
+    color: white;
+
 }
  

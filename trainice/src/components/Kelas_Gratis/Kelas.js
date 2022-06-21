@@ -3,12 +3,23 @@ import './Kelas.css'
 import Footer from './Footer'
 import Header from './Header'
 import Ok from "../assets/Ok.png";
+import Boy from "../assets/boy.png";
 
 const Kelas = () => {
   return (
     <>
       <Header />
         <div className='kontenKelas'>
+          <div className="hero-page row">
+                <div className="col-md-6">
+                    <h2>Program Bahasa Inggris <br/><span>Gratis</span> Bagi Pemula <br/>Hingga Para Expert</h2>
+                    <p>Memberikan pengalaman terbaik belajar bahasa Inggris secara gratis. Temukan teman berbicara bahasa inggrismu dan raih impianmu dengan belajar bahasa inggris secara gratis.</p>
+                    <button className='btn-explore' type="button">Explore</button>
+                </div>
+                <figure className="col-md-6">
+                    <img className="boy" src={Boy} alt="container"/>
+                </figure>
+            </div>
           <div className='manfaat'>
             <h2>Manfaat Pembelajaran</h2>
             <p>Dengan mengikuti program pembelajaran bahasa inggris secara gratis ini kamu<br/> bisa 
