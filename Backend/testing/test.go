@@ -4,7 +4,6 @@ import "testing"
 
 type TestingSuite struct {
 	testing.TB
-	Suite
 }
 
 func (s *TestingSuite) BeforeTest() {
