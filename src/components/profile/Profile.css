@@ -1,0 +1,94 @@
+* {
+  --orange: #fa7436;
+  --grey: #5a6371;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.profile-container {
+  display: flex;
+  width: 100%;
+  height: 65vh;
+  /* background-color: rgb(35, 255, 35); */
+}
+
+.left-container {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.left-content {
+  width: 80%;
+  margin-top: 70px;
+  margin-left: 200px;
+}
+
+#title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  margin-left: -70px;
+}
+
+#name-user {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 30px;
+  /* text-align: center; */
+}
+
+#email-user {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey);
+}
+
+form > h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+form > p {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+.right-container {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+#edit {
+  width: 129px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--orange);
+  color: white;
+  font-weight: 600;
+  border: none;
+  margin-top: 70px;
+}
+
+.mid-container {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid-content {
+  width: 80%;
+}
+
+#password {
+  background-color: none;
+  border: none;
+}
