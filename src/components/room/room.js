@@ -62,7 +62,7 @@ function room() {
                     </div>
                 </div>
                 <div class="col">
-                    <div className="box text-center" >
+                    <div className="boxs text-center" >
                         <div className="link">
                             <h4>Bahasa inggris untuk pemula</h4>
                             <p>join pada link berikut:</p>
