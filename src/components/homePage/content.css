@@ -32,10 +32,10 @@
 .kataMereka {
     display: block;
     width: 90%;
-    margin: 50px auto 0 auto;
+    margin: 50px auto 100px auto;
 }
 
-.box {
+.kotak {
     background-color: #FA7436;
     width: 60%;
     height: fit-content;
@@ -59,4 +59,5 @@
 
 .box .row {
     padding: 80px 80px 80px 80px;
+    margin-top: 50px;
 }

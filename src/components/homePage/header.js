@@ -12,7 +12,7 @@ import containerRight2 from './image/containerRight2.svg'
 
 function Header() {
     return (
-        <div className="header">
+        <div className="">
             {/* NAVBAR AWAL*/}
             <nav class="navbar navbar-expand-lg ">
                 <div class="container-fluid mt-3">
@@ -40,7 +40,7 @@ function Header() {
                                 <a class="nav-link text-dark" href="#">Event</a>
                             </li>
                             <div className='spaceNavbar'></div>
-                            <li class="nav-item" className='flag'>
+                            {/* <li class="nav-item" className='flag'>
                                 <a class="nav-link" href="#"><img src={indonesia} alt="england" width="20px" />
                                 </a>
                             </li>
@@ -52,7 +52,7 @@ function Header() {
                             <li class="nav-item ">
                                 <a class="nav-link" href="#"><img src={night} alt="england" width="20px" />
                                 </a>
-                            </li>
+                            </li> */}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle ms-5 text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src={profil} alt="profil" width="30px" class="me-2" />

@@ -1,9 +1,13 @@
-import About from "./components/about/About";
+// import About from "./components/about/About";
 import "./App.css";
 // import logo from './logo.svg';
 import HomePage from './components/homePage/homePage';
 import Room from './components/room/room';
 import Login from './components/login/Login'
+import Kelas from './components/Kelas_Gratis/Kelas'
+import Profil from './components/profile/Profile'
+import Registrasi from './components/Registrasi/Registration'
+import ForgotPassword from './components/forgot_password/Forgot'
 import './App.css';
 
 function App() {
@@ -11,7 +15,12 @@ function App() {
     <div>
       {/* <HomePage /> */}
       {/* <About /> */}
-      <Login />
+      {/* <Login /> */}
+      {/* <Kelas /> */}
+      {/* <Profil /> */}
+      {/* <Registrasi /> */}
+      <Room />
+      {/* <ForgotPassword /> */}
     </div>
   );
 }

@@ -71,7 +71,7 @@ function Content() {
                 <img src={kelebihan} alt="kelebihan" className="gambar" />
             </div>
             <img src={kataMereka} alt="kataMereka" className="kataMereka" />
-            <div className="box">
+            <div className="kotak">
                 <div class="row mt-lg-5">
                     <div class="col">
                         <h3 class="text-light">Apakah kamu siap untuk<br /> memulai pelajaran?</h3>
