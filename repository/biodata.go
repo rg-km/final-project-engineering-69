@@ -4,34 +4,30 @@ import (
 	"github.com/jmoiron/sqlx"
 )
 
-type BiodataRepository struct {
+type EditProfileRepository struct {
 	db *sqlx.DB
 }
 
-type BiodataErrorResponse struct {
+type EditProfileErrorResponse struct {
 	Error string `json:"error"`
 }
 
-type BiodataSuccesResponse struct {
-	Biodata []Biodata `json:"biodata"`
+type EditProfile struct {
+	Nama   string `json:"nama"`
+	Email  string `json:"email"`
+	Gender string `json:"gender"`
 }
 
-func NewBiodataRepository(db *sqlx.DB) *BiodataRepository {
-	return &BiodataRepository{db: db}
+type EditProfileSuccesResponse struct {
+	EditProfile []EditProfile `json:"editProfile"`
 }
 
-func (u *BiodataRepository) NewBiodata(nama string, jenis_kelamin string, no_hp string, alamat string) ([]Biodata, error) {
-	_, err := u.db.Exec("INSERT INTO biodata (nama, jenis_kelamin, no_hp, alamat) VALUES (?, ?, ?, ?)", nama, jenis_kelamin, no_hp, alamat)
-	if err != nil {
-		return nil, err
-	}
-
-	return nil, nil
-
+func EditProdileRepository(db *sqlx.DB) *UserRepository {
+	return &UserRepository{db: db}
 }
 
-func (u *BiodataRepository) EditBiodata(id int, nama string, jenis_kelamin string, no_hp string, alamat string) ([]Biodata, error) {
-	_, err := u.db.Exec("UPDATE biodata SET nama = ?, jenis_kelamin = ?, no_hp = ?, alamat = ? WHERE id = ?", nama, jenis_kelamin, no_hp, alamat, id)
+func (u *UserRepository) EditProfile(nama string, email string, gender string) ([]EditProfile, error) {
+	_, err := u.db.Exec("UPDATE users SET nama = ?, email = ?, gender = ? WHERE email = ?", nama, email, gender, email)
 	if err != nil {
 		return nil, err
 	}

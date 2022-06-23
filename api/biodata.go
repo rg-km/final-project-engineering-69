@@ -5,36 +5,34 @@ import (
 	"net/http"
 )
 
-type BiodataErrorResponse struct {
+type EditProfileErrorResponse struct {
 	Error string `json:"error"`
 }
 
-type Biodata struct {
-	ID_Biodata    int    `json:"id_biodata"`
-	Nama          string `json:"nama"`
-	Jenis_kelamin string `json:"jenis_kelamin"`
-	No_hp         string `json:"no_hp"`
-	Alamat        string `json:"alamat"`
+type EditProfile struct {
+	Nama   string `json:"nama"`
+	Email  string `json:"email"`
+	Gender string `json:"gender"`
 }
 
-type BiodataSuccesResponse struct {
-	Biodata []Biodata `json:"biodata"`
+type EditProfileSuccesResponse struct {
+	EditProfile []EditProfile `json:"biodata"`
 }
 
-func (api *API) editBiodata(w http.ResponseWriter, req *http.Request) {
+func (api *API) editProfile(w http.ResponseWriter, req *http.Request) {
 	api.AllowOrigin(w, req)
-	var biodata Biodata
-	err := json.NewDecoder(req.Body).Decode(&biodata)
+	var editProfile EditProfile
+	err := json.NewDecoder(req.Body).Decode(&editProfile)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
-		json.NewEncoder(w).Encode(BiodataErrorResponse{Error: err.Error()})
+		json.NewEncoder(w).Encode(EditProfileErrorResponse{Error: err.Error()})
 		return
 	}
 
-	_, err = api.biodataRepo.EditBiodata(biodata.ID_Biodata, biodata.Nama, biodata.Jenis_kelamin, biodata.No_hp, biodata.Alamat)
+	_, err = api.userRepo.EditProfile(editProfile.Nama, editProfile.Email, editProfile.Gender)
 	if err != nil {
 		w.WriteHeader(http.StatusUnauthorized)
-		json.NewEncoder(w).Encode(BiodataErrorResponse{Error: err.Error()})
+		json.NewEncoder(w).Encode(EditProfileErrorResponse{Error: err.Error()})
 		w.Write([]byte(err.Error()))
 		return
 	}

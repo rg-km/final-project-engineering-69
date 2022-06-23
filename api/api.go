@@ -7,15 +7,14 @@ import (
 )
 
 type API struct {
-	userRepo    repository.UserRepository
-	biodataRepo repository.BiodataRepository
-	mux         *http.ServeMux
+	userRepo repository.UserRepository
+	mux      *http.ServeMux
 }
 
-func NewAPI(userRepo repository.UserRepository, biodataRepo repository.BiodataRepository) API {
+func NewAPI(userRepo repository.UserRepository) API {
 	mux := http.NewServeMux()
 	api := API{
-		userRepo, biodataRepo, mux,
+		userRepo, mux,
 	}
 
 	mux.Handle("/api/user/login", api.POST(http.HandlerFunc(api.login)))
@@ -23,7 +22,7 @@ func NewAPI(userRepo repository.UserRepository, biodataRepo repository.BiodataRe
 	mux.Handle("/api/user/register", api.POST(http.HandlerFunc(api.register)))
 
 	mux.Handle("/api/user/profile", api.GET(http.HandlerFunc(api.profile)))
-	mux.Handle("/api/user/profile/editbiodata", api.POST(http.HandlerFunc(api.editBiodata)))
+	mux.Handle("/api/user/profile/editprofile", api.POST(http.HandlerFunc(api.editProfile)))
 
 	return api
 }

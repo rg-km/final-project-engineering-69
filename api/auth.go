@@ -16,6 +16,7 @@ type User struct {
 	Nama     string `json:""nama   db:"nama"`
 	Email    string `json:"email"  db:"email"`
 	Password string `json:"password"  db:"password"`
+	Gender   string `json:"gender"    db:"gender"`
 }
 
 type LoginSuccessResponse struct {
@@ -137,7 +138,7 @@ func (api *API) register(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	err = api.userRepo.Register(user.Nama, user.Email, user.Password)
+	err = api.userRepo.Register(user.Nama, user.Email, user.Password, user.Gender)
 	if err != nil {
 		w.WriteHeader(http.StatusUnauthorized)
 		w.Write([]byte("Error"))

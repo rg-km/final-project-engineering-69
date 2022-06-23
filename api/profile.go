@@ -10,8 +10,9 @@ type ProfileErrorResponse struct {
 }
 
 type Profile struct {
-	Name  string `json:"name"`
-	Email string `json:"email"`
+	Name   string `json:"name"`
+	Email  string `json:"email"`
+	Gender string `json:"gender"`
 }
 
 type ProfileSuccesResponse struct {
@@ -39,8 +40,9 @@ func (api *API) profile(w http.ResponseWriter, req *http.Request) {
 
 	for _, profile := range profile {
 		response.Profile = append(response.Profile, Profile{
-			Name:  profile.Nama,
-			Email: profile.Email,
+			Name:   profile.Nama,
+			Email:  profile.Email,
+			Gender: profile.Gender,
 		})
 	}
 
