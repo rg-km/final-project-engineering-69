@@ -13,6 +13,7 @@ type Profile struct {
 	Name   string `json:"name"`
 	Email  string `json:"email"`
 	Gender string `json:"gender"`
+	No_hp  string `json:"no_hp"`
 }
 
 type ProfileSuccesResponse struct {
@@ -43,6 +44,7 @@ func (api *API) profile(w http.ResponseWriter, req *http.Request) {
 			Name:   profile.Nama,
 			Email:  profile.Email,
 			Gender: profile.Gender,
+			No_hp:  profile.No_hp,
 		})
 	}
 

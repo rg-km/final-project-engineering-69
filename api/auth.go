@@ -13,15 +13,16 @@ type UserErrorResponse struct {
 }
 
 type User struct {
-	Nama     string `json:""nama   db:"nama"`
-	Email    string `json:"email"  db:"email"`
+	Nama     string `json:""nama      db:"nama"`
+	Email    string `json:"email"     db:"email"`
 	Password string `json:"password"  db:"password"`
 	Gender   string `json:"gender"    db:"gender"`
+	No_hp    string `json:"no_hp"     db:"no_hp"`
 }
 
 type LoginSuccessResponse struct {
-	Username string `json:"username"`
-	Token    string `json:"token"`
+	Email string `json:"email"`
+	Token string `json:"token"`
 }
 
 type AuthErrorResponse struct {
@@ -91,7 +92,7 @@ func (api *API) login(w http.ResponseWriter, req *http.Request) {
 		Path:    "/",
 	})
 
-	json.NewEncoder(w).Encode(LoginSuccessResponse{Username: res.Nama, Token: tokenString})
+	json.NewEncoder(w).Encode(LoginSuccessResponse{Email: res.Email, Token: tokenString})
 }
 
 func (api *API) logout(w http.ResponseWriter, req *http.Request) {
@@ -138,7 +139,7 @@ func (api *API) register(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	err = api.userRepo.Register(user.Nama, user.Email, user.Password, user.Gender)
+	err = api.userRepo.Register(user.Nama, user.Email, user.Password, user.Gender, user.No_hp)
 	if err != nil {
 		w.WriteHeader(http.StatusUnauthorized)
 		w.Write([]byte("Error"))

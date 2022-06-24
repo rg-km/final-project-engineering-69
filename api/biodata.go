@@ -13,6 +13,7 @@ type EditProfile struct {
 	Nama   string `json:"nama"`
 	Email  string `json:"email"`
 	Gender string `json:"gender"`
+	No_hp  string `json:"no_hp"`
 }
 
 type EditProfileSuccesResponse struct {
@@ -29,7 +30,7 @@ func (api *API) editProfile(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	_, err = api.userRepo.EditProfile(editProfile.Nama, editProfile.Email, editProfile.Gender)
+	_, err = api.userRepo.EditProfile(editProfile.Nama, editProfile.Email, editProfile.Gender, editProfile.No_hp)
 	if err != nil {
 		w.WriteHeader(http.StatusUnauthorized)
 		json.NewEncoder(w).Encode(EditProfileErrorResponse{Error: err.Error()})

@@ -21,6 +21,8 @@ func main() {
 		password varhar(255),
 		gender varchar(255)
 		);
+
+		ALTER TABLE users ADD no_hp varchar(255);
 		`)
 	if err != nil {
 		log.Fatal("Error creating table: ", err)
