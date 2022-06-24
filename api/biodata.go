@@ -10,7 +10,7 @@ type BiodataErrorResponse struct {
 }
 
 type Biodata struct {
-	ID            string `json:"id"`
+	ID            int    `json:"id"`
 	Nama          string `json:"nama"`
 	Jenis_kelamin string `json:"jenis_kelamin"`
 	No_hp         string `json:"no_hp"`
@@ -31,7 +31,7 @@ func (api *API) editBiodata(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	err = api.biodataRepo.EditBiodata(biodata.ID, biodata.Nama, biodata.Jenis_kelamin, biodata.No_hp, biodata.Alamat)
+	_, err = api.biodataRepo.EditBiodata(biodata.ID, biodata.Nama, biodata.Jenis_kelamin, biodata.No_hp, biodata.Alamat)
 	if err != nil {
 		w.WriteHeader(http.StatusUnauthorized)
 		json.NewEncoder(w).Encode(BiodataErrorResponse{Error: err.Error()})
