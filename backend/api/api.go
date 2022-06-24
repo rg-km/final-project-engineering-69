@@ -3,7 +3,7 @@ package api
 import (
 	"fmt"
 	"net/http"
-	"test/repository"
+	"trainice/backend/repository"
 )
 
 type API struct {

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-	"test/api"
-	"test/repository"
+	"trainice/backend/api"
+	"trainice/backend/repository"
 
 	"github.com/jmoiron/sqlx"
 
