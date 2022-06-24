@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type UserErrorResponse struct {
@@ -139,7 +140,10 @@ func (api *API) register(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	err = api.userRepo.Register(user.Nama, user.Email, user.Password, user.Gender, user.No_hp)
+	hash, _ := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+	convStr := string(hash)
+
+	err = api.userRepo.Register(user.Nama, user.Email, convStr, user.Gender, user.No_hp)
 	if err != nil {
 		w.WriteHeader(http.StatusUnauthorized)
 		w.Write([]byte("Error"))

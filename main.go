@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	db, err := sqlx.Open("sqlite3", "./test.db")
+	db, err := sqlx.Open("sqlite3", "db/migration/test.db")
 	if err != nil {
 		log.Fatal("Error opening database: ", err)
 	}

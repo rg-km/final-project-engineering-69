@@ -10,7 +10,7 @@ import (
 func main() {
 	db, err := sql.Open("sqlite3", "./test.db")
 	if err != nil {
-		log.Fatal("Error opening database: ", err)
+		log.Fatal("Error creating database: ", err)
 	}
 
 	_, err = db.Exec(`
@@ -22,7 +22,7 @@ func main() {
 		gender varchar(255)
 		);
 
-		ALTER TABLE users ADD no_hp varchar(255);
+		ALTER TABLE users DROP COLUMN updated_at;
 		`)
 	if err != nil {
 		log.Fatal("Error creating table: ", err)
