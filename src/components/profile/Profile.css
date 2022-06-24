@@ -23,16 +23,15 @@
 }
 
 .left-content {
-  width: 80%;
-  margin-top: 70px;
+  /* width: 80%; */
+  /* margin-top: 70px; */
   margin-left: 200px;
 }
 
 #title {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 200;
   margin-bottom: 40px;
-  margin-left: -70px;
 }
 
 #name-user {
@@ -48,12 +47,12 @@
   color: var(--grey);
 }
 
-form > h5 {
+form>h5 {
   font-size: 18px;
   font-weight: 500;
 }
 
-form > p {
+form>p {
   font-size: 12px;
   font-weight: 500;
   color: var(--grey);

@@ -3,12 +3,14 @@ import Trainice from "../assets/Trainice.png";
 import Profil from "../assets/profile.png";
 import Setting from "../assets/setting.png";
 import Logout from "../assets/logout.png";
+import Navbar from '../homePage/navbar'
 
 function Header() {
     return (
         <div className='header'>
+            <Navbar />
             {/* NAVBAR AWAL*/}
-            <nav class="navbar navbar-expand-lg ">
+            {/* <nav class="navbar navbar-expand-lg ">
                 <div class="container">
                     <img src={Trainice} alt='logo' className='logo' />
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +42,7 @@ function Header() {
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
         </div>
     )
 }

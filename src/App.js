@@ -1,4 +1,4 @@
-// import About from "./components/about/About";
+import About from "./components/about/About";
 import "./App.css";
 // import logo from './logo.svg';
 import HomePage from './components/homePage/homePage';
@@ -18,9 +18,10 @@ function App() {
       {/* <Login /> */}
       {/* <Kelas /> */}
       {/* <Profil /> */}
-      {/* <Registrasi /> */}
-      <Room />
+      <Registrasi />
+      {/* <Room /> */}
       {/* <ForgotPassword /> */}
+      {/* <HomePage /> */}
     </div>
   );
 }

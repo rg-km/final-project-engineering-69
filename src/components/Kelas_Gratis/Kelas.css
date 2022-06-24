@@ -1,29 +1,29 @@
-.kontenKelas{
+.kontenKelas {
     font-family: 'Poppins', sans-serif;
     margin: auto;
 }
 
-.kontenKelas h2{
+.kontenKelas h2 {
     text-align: center;
     margin-bottom: 40px;
     font-weight: bold;
 }
 
-.hero-page{
+.hero-page {
     background-color: #FFF6F2;
     text-align: left;
     padding: 80px 110px;
     margin: 0 auto;
 }
 
-.hero-page h2{
-    font-weight:bold;
+.hero-page h2 {
+    font-weight: bold;
     line-height: 1.5em;
     text-align: left;
 }
 
 .btn-explore,
-.btn-mulai{
+.btn-mulai {
     border: white solid 1px;
     background-color: #FA7436;
     padding: 8px;
@@ -34,48 +34,49 @@
 }
 
 
-span{
+span {
     color: #FA7436;
 }
 
-figure{
+figure {
     text-align: right;
 }
 
-.boy{
+.boy {
     width: 60%;
 }
 
-.manfaat, .siap{
+.manfaat,
+.siap {
     padding: 80px 110px;
     background-color: #ffffff;
 }
 
-.manfaat p{
+.manfaat p {
     text-align: center;
     margin-bottom: 40px;
 }
 
 .manfaat li,
-.fasilitas li{
+.fasilitas li {
     list-style-type: none;
     text-align: left;
     line-height: 3em;
 }
 
-.fasilitas{
+.fasilitas {
     background-color: #FFF6F2;
     padding: 80px 110px;
 }
 
-.box{
+.box {
     width: 30%;
     margin: auto;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(194, 194, 194, 0.75);
 }
 
-.top{
+.top {
     background-color: #FA7436;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -84,7 +85,7 @@ figure{
     color: white;
 }
 
-.bottom{
+.bottom {
     background-color: #ffffff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -92,21 +93,23 @@ figure{
     text-align: center;
 }
 
-.btn-tanya{
+.btn-tanya {
     color: #F7AD19;
     border-radius: 7px;
     border: #F7AD19 solid 2px;
     padding: 7px;
-    width: 100%;
+    width: 30%;
+    margin-left: 449px;
+    margin-top: 30px;
     background-color: #ffffff;
 }
 
-.btn-tanya:hover{
+.btn-tanya:hover {
     background-color: #F7AD19;
     color: white;
 }
 
-.kotak{
+.kotak {
     width: 70%;
     margin: auto;
     background-color: #FA7436;
@@ -115,7 +118,7 @@ figure{
     padding: 50px;
 }
 
-.btn-kontak{
+.btn-kontak {
     border: white solid 1px;
     background-color: white;
     color: #FA7436;
@@ -127,11 +130,11 @@ figure{
 
 .btn-explore:hover,
 .btn-mulai:hover,
-.btn-kontak:hover{
+.btn-kontak:hover {
     background-color: #F7AD19;
     color: white;
 }
 
-.grup-btn{
+.grup-btn {
     text-align: right;
 }
