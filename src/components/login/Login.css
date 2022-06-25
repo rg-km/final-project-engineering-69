@@ -1,0 +1,139 @@
+* {
+  font-family: "Poppins";
+}
+
+body {
+  width: 98.5vw;
+  height: 90vh;
+  background-color: #fff6f2;
+}
+
+/* #loginKiri {
+  height: 100vh;
+} */
+
+/* #loginKanan {
+
+  width: 200%;
+  height: 100%;
+  max-width: 99.5vw;
+} */
+
+h1.title {
+  color: #fa7436;
+  font-family: "Fredoka One";
+  position: relative;
+  right: 8.5vw;
+  margin-left: 260px;
+}
+
+#loginButton {
+  background-color: #fa7436;
+  border: none;
+  border-radius: 5px;
+  width: 21.4vw;
+  height: 4.7vh;
+  margin-bottom: 2vh;
+
+
+  position: relative;
+  right: 2.2vw;
+  bottom: 5vh;
+}
+
+
+form {
+  position: relative;
+  left: 3vw;
+  top: 15vh;
+}
+
+label.email {
+  position: relative;
+  right: 9.4vw;
+  top: 2vh;
+}
+
+#exampleInputEmail1 {
+  position: relative;
+  left: 8.5vw;
+  top: 20px;
+}
+
+#emailHelp {
+  position: relative;
+  right: 2.5vw;
+  top: 20px;
+}
+
+#exampleInputPassword {
+  position: relative;
+  right: 10.5vw;
+  top: 30px;
+}
+
+#InputPassword {
+  position: relative;
+  left: 8.5vw;
+  top: 30px;
+}
+
+#check {
+  position: relative;
+  left: 8.5vw;
+  bottom: 2vh;
+}
+
+.form-check-label {
+  position: relative;
+  right: 9.3vw;
+  bottom: 2.3vw;
+}
+
+.lupaPassword {
+  position: absolute;
+  left: 22.5vw;
+  bottom: 21.5vh;
+  top: 260px;
+  text-decoration-line: none;
+  color: black;
+}
+
+p.login {
+  position: relative;
+  right: 2.5vw;
+  bottom: 6vh;
+}
+
+img.login {
+  padding: 50vh;
+}
+
+a.daftar {
+  text-decoration-line: none;
+  color: #fa7436;
+  margin-left: 0.3vw;
+  text-align: left;
+}
+
+p.atau {
+  position: relative;
+  left: 10.7vw;
+  text-align: left;
+}
+
+.daftar:hover,
+.lupaPassword:hover {
+  color: #dd6229;
+}
+
+#loginButton:hover {
+  background-color: #fa7436;
+  color: white;
+}
+
+#imgCover {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
