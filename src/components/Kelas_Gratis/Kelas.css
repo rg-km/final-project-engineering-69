@@ -13,7 +13,8 @@
     background-color: #FFF6F2;
     text-align: left;
     padding: 80px 110px;
-    margin: 0 auto;
+    height: 570px;
+    align-items: center;
 }
 
 .hero-page h2 {
@@ -23,7 +24,7 @@
 }
 
 .btn-explore,
-.btn-mulai {
+.btn-mulai, #edit{
     border: white solid 1px;
     background-color: #FA7436;
     padding: 8px;
@@ -32,7 +33,6 @@
     color: white;
     margin-right: 10px;
 }
-
 
 span {
     color: #FA7436;
@@ -55,6 +55,15 @@ figure {
 .manfaat p {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.center{
+   margin: auto;
+   justify-items: center;
+}
+
+.kj{
+    margin: auto;
 }
 
 .manfaat li,
@@ -98,8 +107,7 @@ figure {
     border-radius: 7px;
     border: #F7AD19 solid 2px;
     padding: 7px;
-    width: 30%;
-    margin-left: 449px;
+    width: 100%;
     margin-top: 30px;
     background-color: #ffffff;
 }
@@ -110,7 +118,7 @@ figure {
 }
 
 .kotak {
-    width: 70%;
+    width: 80%;
     margin: auto;
     background-color: #FA7436;
     border-radius: 10px;
@@ -130,7 +138,8 @@ figure {
 
 .btn-explore:hover,
 .btn-mulai:hover,
-.btn-kontak:hover {
+.btn-kontak:hover,
+#edit:hover {
     background-color: #F7AD19;
     color: white;
 }

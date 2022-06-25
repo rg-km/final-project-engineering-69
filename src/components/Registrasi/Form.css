@@ -8,17 +8,22 @@
     font-size: 14px;
     color: #5A6371;
     background-color:#ffffff;
-    margin: 0;
+    margin: auto;
 }
 
 #logo{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .form{
     width: 100%;
     max-width: 80%;
-    margin: 0 auto;
+    margin: auto;
+}
+
+.form-label{
+    margin: 0;
+    padding: 0;
 }
 
 .form-group{
@@ -33,12 +38,6 @@
 .form-inputs{
     margin: 15px 0;
     text-align: left;
-}
-
-#logo{
-    font-family: 'Fredoka One', cursive;
-    color: #FA7436;
-    font-weight: 00;
 }
 
 #signup{

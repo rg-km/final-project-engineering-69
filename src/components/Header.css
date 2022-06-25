@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    position: sticky;
+    top: 0;
 }
 
 .spaceNavbar{

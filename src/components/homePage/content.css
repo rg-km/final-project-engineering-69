@@ -1,7 +1,12 @@
-.contentRight {
-    margin: 50px 0 50px 0;
+.konten {
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+}
+
+.konten h2 {
+    text-align: center;
+    margin-bottom: 40px;
     font-weight: bold;
-    color: #FA7436;
 }
 
 .contentKedua {
@@ -12,7 +17,7 @@
 .contentKedua h2 {
     text-align: center;
     font-weight: bold;
-    color: black;
+    color: black;  
     padding-top: 50px;
 }
 
@@ -35,29 +40,33 @@
     margin: 50px auto 100px auto;
 }
 
-.kotak {
-    background-color: #FA7436;
-    width: 60%;
-    height: fit-content;
-    margin: auto;
-    border-radius: 10px;
+.containerRight {
+    margin: 20px 0px;
+    width: 70%;
 }
 
-/* .box .mulai {
-    width: 30%;
-    border: 1px solid #fdd2be;
-    padding: 10px 50px 10px 10px;
-} */
-.box .row .col .btn {
+
+.buttonContainer {
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: content-box;
     color: white;
-    border: 1px solid white;
+    border-radius: 10%;
+    display: block;
+    border: none;
+    background-color: #FA7436;
 }
 
-.box .row .col .btn .bg-white {
-    color: black;
-}
+@media only screen and (max-width : 480px) {
+    .containerRight {
+        margin-left: 80px;
+        margin-top: 60px;
+        width: 50%;
+    }
 
-.box .row {
-    padding: 80px 80px 80px 80px;
-    margin-top: 50px;
+    .containerLeft {
+        margin-left: 80px;
+        margin-top: 130px;
+        width: 50%;
+    }
 }

@@ -1,12 +1,12 @@
 import "./Footer.css"
-import Trainicep from "../assets/Trainicep.png";
-import Instagram from "../assets/Instagram.png";
-import Facebook from "../assets/Facebook F.png";
-import YouTube from '../assets/YouTube.png';
-import Linkedin from "../assets/LinkedIn.png";
-import Whatsapp from "../assets/WhatsApp.png";
-import Mail from "../assets/Mail.png";
-import Phone from "../assets/Phone.png";
+import Trainicep from "./assets/Trainicep.png";
+import Instagram from "./assets/Instagram.png";
+import Facebook from "./assets/Facebook F.png";
+import YouTube from './assets/YouTube.png';
+import Linkedin from "./assets/LinkedIn.png";
+import Whatsapp from "./assets/WhatsApp.png";
+import Mail from "./assets/Mail.png";
+import Phone from "./assets/Phone.png";
 
 
 function Footer() {

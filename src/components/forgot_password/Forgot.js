@@ -1,5 +1,6 @@
 import "./Forgot.css";
 import ForgotImg from "./assets/forgot.png";
+import { Link } from "react-router-dom";
 
 function Forgot() {
   return (
@@ -24,7 +25,7 @@ function Forgot() {
             <input type="submit" id="submit" name="submit" value="Kirim" />
           </form>
           <p className="description">
-            Kembali ke <a href="#">Login</a>
+            Kembali ke <Link to="/login">Login</Link>
           </p>
         </div>
       </div>

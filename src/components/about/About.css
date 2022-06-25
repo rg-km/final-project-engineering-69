@@ -32,22 +32,18 @@ p.deskripsi {
 }
 
 h1.judul {
-  /* position: relative;
+  position: relative;
   top: 30px;
-  left: 28px;
-  max-width: 300px; */
+  max-width: 300px;
   margin-left: 30px;
   font-size: 25px;
   font-weight: bolder;
 }
 
-/* h1.trainiceJudul {
-  position: absolute;
-  bottom: -0.5rem;
-  left: 11rem;
+span {
   color: #fa7436;
   max-width: 300px;
-} */
+}
 
 .buttonExplore {
   padding: 10px;

@@ -1,12 +1,12 @@
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../Footer";
+import Header from "../Header";
 import "./EditProfile.css";
 import EditProfileImage from "./assets/EditProfile/EditProfileImage.svg";
 
 function EditProfile() {
   return (
     <>
-      <Header></Header>
+      <Header />
       <div className="edit-profile-container container-fluid">
         <div className="edit-profile-content">
           <div className="left-container">
@@ -65,7 +65,7 @@ function EditProfile() {
           </form>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

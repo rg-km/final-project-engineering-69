@@ -1,12 +1,12 @@
-import Footer from "./Footer";
-import Navbar from "../homePage/navbar";
+import Footer from "../Footer";
+import Header from "../Header";
 import "./Profile.css";
 import ProfilePicture from "./assets/Profile/Profile-Picture.svg";
 
 function Profile() {
   return (
     <>
-      <Navbar></Navbar>
+      <Header />
       <div class="row align-items-start">
         <div class="col">
           <div className="left-container">
@@ -45,8 +45,7 @@ function Profile() {
           </div>
         </div>
       </div>
-
-      {/* <Footer></Footer> */}
+    <Footer/>
     </>
   );
 }

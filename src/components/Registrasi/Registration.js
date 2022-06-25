@@ -1,6 +1,7 @@
 import './Form.css'
 import People from '../assets/people.png'
 import Trainice from '../assets/Trainice.png'
+import { Link } from "react-router-dom";
 
 const Registration = () => {
 
@@ -44,7 +45,7 @@ const Registration = () => {
 
                         <button id='signup' type='submit'>Sign up</button>
                         <p className='form-input-login text-center'>
-                            Sudah punya akun? <a href='../login/login.js'> Login disini</a>
+                            Sudah punya akun? <Link to='/login'> Login disini</Link>
                         </p>
                     </div>
                 </form>
