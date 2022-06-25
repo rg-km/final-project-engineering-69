@@ -1,9 +1,15 @@
 import Footer from "../Footer";
 import Header from "../Header";
 import "./EditProfile.css";
+import { Link, useNavigate } from "react-router-dom";
 import EditProfileImage from "./assets/EditProfile/EditProfileImage.svg";
 
 function EditProfile() {
+  const navigate = useNavigate();
+
+  const handleSubmitEditProfile = () => {
+    navigate("/profile");
+  };
   return (
     <>
       <Header />
@@ -39,12 +45,7 @@ function EditProfile() {
                 <label for="laki" class="gender-label">
                   Laki-laki
                 </label>
-                <input
-                  type="radio"
-                  id="perempuan"
-                  name="gender"
-                  value="perempuan"
-                />
+                <input type="radio" id="perempuan" name="gender" value="perempuan" />
                 <label for="perempuan" class="gender-label">
                   Perempuan
                 </label>
@@ -60,7 +61,7 @@ function EditProfile() {
           </div>
         </div>
         <div className="form-submit">
-          <form>
+          <form onSubmit={handleSubmitEditProfile}>
             <input type="submit" id="submit" value="Simpan Perubahan" />
           </form>
         </div>

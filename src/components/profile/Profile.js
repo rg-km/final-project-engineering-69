@@ -1,52 +1,60 @@
 import Footer from "../Footer";
 import Header from "../Header";
 import "./Profile.css";
+import { Link, useNavigate } from "react-router-dom";
 import ProfilePicture from "./assets/Profile/Profile-Picture.svg";
 
 function Profile() {
+  const navigate = useNavigate();
+
+  const handleEditProfile = () => {
+    navigate("/editProfile");
+  };
+
   return (
-    <>
+    <div>
       <Header />
-      <div class="row align-items-start">
-        <div class="col">
-          <div className="left-container">
-            <div className="left-content">
-              <img src={ProfilePicture} alt="Profile Picture" />
-              <p id="name-user">Gustio Nusamba</p>
-              <p id="email-user">gusti2480@gmail.com</p>
+      <div className="contentProfile">
+        <div class="row align-items-start">
+          <div class="col">
+            <div className="left-containerProfile">
+              <div className="left-contentProfile">
+                <img src={ProfilePicture} alt="Profile Picture" />
+                <p id="name-userProfile">Gustio Nusamba</p>
+                <p id="email-userProfile">gusti2480@gmail.com</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col">
-
-          <div className="mid-container">
-            <div className="mid-content">
-              <h1 id="title">Profile Saya</h1>
-              <form>
-                <h5>Nama</h5>
-                <p>Gustio Nusamba</p>
-                <h5>Email</h5>
-                <p>gusti2480@gmail.com</p>
-                <h5>No. HP</h5>
-                <p>08991234567</p>
-                <h5>Gender</h5>
-                <p>Laki-laki</p>
-                <h5>Password</h5>
-                <input type="password" value="userpassword" id="password" />
+          <div class="col">
+            <div className="mid-containerProfile">
+              <div className="mid-contentProfile">
+                <h1 id="titleProfile">Profile Saya</h1>
+                <form id="formProfile">
+                  <h5>Nama</h5>
+                  <p>Gustio Nusamba</p>
+                  <h5>Email</h5>
+                  <p>gusti2480@gmail.com</p>
+                  <h5>No. HP</h5>
+                  <p>08991234567</p>
+                  <h5>Gender</h5>
+                  <p>Laki-laki</p>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div className="right-containerProfile">
+              <form onSubmit={handleEditProfile}>
+                <button type="submit" id="editProfile">
+                  Edit Profil
+                </button>
               </form>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div className="right-container">
-            <form>
-              <button id="edit">Edit Profil</button>
-            </form>
-          </div>
-        </div>
       </div>
-    <Footer/>
-    </>
+      <Footer />
+    </div>
   );
 }
 

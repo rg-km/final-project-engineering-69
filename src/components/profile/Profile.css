@@ -1,70 +1,45 @@
-* {
-  --orange: #fa7436;
-  --grey: #5a6371;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+.contentProfile {
+  width: 98vw;
 }
-
-.profile-container {
-  display: flex;
-  width: 100%;
-  height: 65vh;
-  /* background-color: rgb(35, 255, 35); */
-}
-
-.left-container {
+.left-containerProfile {
   width: 33%;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
+  position: relative;
+  right: 5vw;
+  margin-top: 10px;
 }
 
-.left-content {
-  /* width: 80%; */
-  /* margin-top: 70px; */
+.left-contentProfile {
   margin-left: 200px;
 }
 
-#title {
-  font-size: 20px;
-  font-weight: 200;
-  margin-bottom: 40px;
-}
-
-#name-user {
+#name-userProfile {
   font-size: 20px;
   font-weight: 600;
   margin-top: 30px;
-  /* text-align: center; */
 }
 
-#email-user {
+#email-userProfile {
   font-size: 14px;
   font-weight: 600;
   color: var(--grey);
 }
 
-form>h5 {
+.formProfile {
   font-size: 18px;
   font-weight: 500;
-}
-
-form>p {
   font-size: 12px;
   font-weight: 500;
   color: var(--grey);
 }
 
-.right-container {
+.right-containerProfile {
   width: 33%;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  right: 20vw;
+  bottom: 7vh;
 }
 
-#edit {
+#editProfile {
   width: 129px;
   height: 40px;
   border-radius: 5px;
@@ -75,20 +50,13 @@ form>p {
   margin-top: 70px;
 }
 
-.mid-container {
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#editProfile:hover {
+  background-color: #dd6229;
 }
 
-.mid-content {
+.mid-containerProfile {
   width: 80%;
-  text-align: left;
-}
-
-#password {
-  background-color: none;
-  border: none;
+  position: relative;
+  right: 5vw;
+  margin-top: 30px;
 }
