@@ -24,6 +24,7 @@ func NewAPI(userRepo repository.UserRepository) API {
 	mux.Handle("/api/user/profile", api.GET(http.HandlerFunc(api.profile)))
 	mux.Handle("/api/user/profile/editprofile", api.POST(http.HandlerFunc(api.editProfile)))
 
+	mux.Handle("/api/user/dashboard", api.GET(http.HandlerFunc(api.dashboard)))
 	return api
 }
 

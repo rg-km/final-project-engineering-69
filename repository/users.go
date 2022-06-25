@@ -100,3 +100,12 @@ func (p *UserRepository) GetProfile(id int64) (User, error) {
 
 	return users, nil
 }
+func (p *UserRepository) Dashboard(id int64) (User, error) {
+	var users User
+	err := p.db.QueryRow("SELECT * FROM users WHERE id = ?", id).Scan(&users.ID, &users.Nama, &users.Email, &users.Password, &users.Gender, &users.No_hp)
+	if err != nil {
+		return users, err
+	}
+
+	return users, nil
+}
