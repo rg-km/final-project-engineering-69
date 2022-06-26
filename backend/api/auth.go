@@ -14,11 +14,11 @@ type UserErrorResponse struct {
 }
 
 type User struct {
-	Nama     string `json:""nama      db:"nama"`
-	Email    string `json:"email"     db:"email"`
-	Password string `json:"password"  db:"password"`
-	Gender   string `json:"gender"    db:"gender"`
-	No_hp    string `json:"no_hp"     db:"no_hp"`
+	Nama     string `json:"nama"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+	Gender   string `json:"gender"`
+	No_hp    string `json:"no_hp"`
 }
 
 type LoginSuccessResponse struct {
@@ -42,7 +42,7 @@ type Claims struct {
 }
 
 func (api *API) login(w http.ResponseWriter, req *http.Request) {
-	api.AllowOrigin(w, req)
+
 	var user User
 	err := json.NewDecoder(req.Body).Decode(&user)
 	if err != nil {
@@ -98,7 +98,7 @@ func (api *API) login(w http.ResponseWriter, req *http.Request) {
 
 func (api *API) logout(w http.ResponseWriter, req *http.Request) {
 	api.AllowOrigin(w, req)
-
+	enableCors(&w)
 	token, err := req.Cookie("token")
 	if err != nil {
 		if err == http.ErrNoCookie {
@@ -151,5 +151,5 @@ func (api *API) register(w http.ResponseWriter, req *http.Request) {
 	}
 
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("Success"))
+	w.Write([]byte(user.Nama + " success register"))
 }

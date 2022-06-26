@@ -4,9 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/final-project-engineering-69/repository"
-
 	"github.com/final-project-engineering-69/api"
+	"github.com/final-project-engineering-69/repository"
 
 	"github.com/jmoiron/sqlx"
 
