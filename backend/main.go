@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"log"
-	"trainice/backend/api"
-	"trainice/backend/repository"
+
+	"github.com/final-project-engineering-69/api"
+	"github.com/final-project-engineering-69/repository"
 
 	"github.com/jmoiron/sqlx"
 
@@ -12,7 +13,7 @@ import (
 )
 
 func main() {
-	db, err := sqlx.Open("sqlite3", "./test.db")
+	db, err := sqlx.Open("sqlite3", "db/migration/test.db")
 	if err != nil {
 		log.Fatal("Error opening database: ", err)
 	}

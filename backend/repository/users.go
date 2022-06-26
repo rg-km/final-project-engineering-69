@@ -36,7 +36,7 @@ func (u *UserRepository) FetchUsers() ([]User, error) {
 
 	for rows.Next() {
 		var user User
-		err := rows.Scan(&user.ID, &user.Nama, &user.Email, &user.Password, &user.Gender, &user.CreatedAt, &user.UpdatedAt)
+		err := rows.Scan(&user.ID, &user.Nama, &user.Email, &user.Password, &user.Gender, &user.No_hp, &user.CreatedAt, &user.UpdatedAt)
 		if err != nil {
 			return nil, err
 		}
@@ -52,8 +52,8 @@ func (u *UserRepository) Login(email string, password string) (*User, error) {
 	return users, err
 }
 
-func (u *UserRepository) Register(nama string, email string, password string, gender string) error {
-	_, err := u.db.Exec("INSERT INTO users (nama, email, password, gender) VALUES (?, ?, ?, ?)", nama, email, password, gender)
+func (u *UserRepository) Register(nama string, email string, password string, gender string, no_hp string) error {
+	_, err := u.db.Exec("INSERT INTO users (nama, email, password, gender, no_hp) VALUES (?, ?, ?, ?, ?)", nama, email, password, gender, no_hp)
 	if err != nil {
 		return err
 	}
@@ -61,8 +61,8 @@ func (u *UserRepository) Register(nama string, email string, password string, ge
 	return nil
 }
 
-func (u *UserRepository) UpdateUser(id string, nama string, email string, password string, gender string) error {
-	_, err := u.db.Exec("UPDATE users SET nama = ?, email = ?, password = ?, gender = ? WHERE email = ?", nama, email, password, gender, email)
+func (u *UserRepository) UpdateUser(id string, nama string, email string, password string, gender string, no_hp string) error {
+	_, err := u.db.Exec("UPDATE users SET nama = ?, email = ?, password = ?, gender = ?, no_hp = ? WHERE email = ?", nama, email, password, gender, no_hp, email)
 	if err != nil {
 		return err
 	}
@@ -91,8 +91,21 @@ func (u *UserRepository) CheckUser(email string) (string, error) {
 	return user.Email, nil
 }
 
-func (p *UserRepository) GetProfile() ([]User, error) {
-	users := []User{}
-	err := p.db.Select(&users, "SELECT * FROM users")
-	return users, err
+func (p *UserRepository) GetProfile(id int64) (User, error) {
+	var users User
+	err := p.db.QueryRow("SELECT * FROM users WHERE id = ?", id).Scan(&users.ID, &users.Nama, &users.Email, &users.Password, &users.Gender, &users.No_hp)
+	if err != nil {
+		return users, err
+	}
+
+	return users, nil
+}
+func (p *UserRepository) Dashboard(id int64) (User, error) {
+	var users User
+	err := p.db.QueryRow("SELECT * FROM users WHERE id = ?", id).Scan(&users.ID, &users.Nama, &users.Email, &users.Password, &users.Gender, &users.No_hp)
+	if err != nil {
+		return users, err
+	}
+
+	return users, nil
 }

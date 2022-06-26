@@ -16,6 +16,7 @@ type EditProfile struct {
 	Nama   string `json:"nama"`
 	Email  string `json:"email"`
 	Gender string `json:"gender"`
+	No_hp  string `json:"no_hp"`
 }
 
 type EditProfileSuccesResponse struct {
@@ -26,8 +27,8 @@ func EditProdileRepository(db *sqlx.DB) *UserRepository {
 	return &UserRepository{db: db}
 }
 
-func (u *UserRepository) EditProfile(nama string, email string, gender string) ([]EditProfile, error) {
-	_, err := u.db.Exec("UPDATE users SET nama = ?, email = ?, gender = ? WHERE email = ?", nama, email, gender, email)
+func (u *UserRepository) EditProfile(nama string, email string, gender string, no_hp string) ([]EditProfile, error) {
+	_, err := u.db.Exec("UPDATE users SET nama = ?, email = ?, gender = ?, no_hp = ? WHERE email = ?", nama, email, gender, no_hp, email)
 	if err != nil {
 		return nil, err
 	}

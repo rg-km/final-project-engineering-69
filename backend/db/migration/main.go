@@ -10,7 +10,7 @@ import (
 func main() {
 	db, err := sql.Open("sqlite3", "./test.db")
 	if err != nil {
-		log.Fatal("Error opening database: ", err)
+		log.Fatal("Error creating database: ", err)
 	}
 
 	_, err = db.Exec(`
@@ -19,8 +19,12 @@ func main() {
 		nama varchar(255), 
 		email varchar(255), 
 		password varhar(255),
-		gender varchar(255)
+		gender varchar(255),
+		no_hp varchar(255)
 		);
+	INSERT INTO users(nama, email, password, gender,no_hp) VALUES
+		('rama', 'ram@gmail.com', '123', 'laki-laki','0851555'),
+		('syifa', 'syf@gmail.com', '444', 'perempuan','08777');
 		`)
 	if err != nil {
 		log.Fatal("Error creating table: ", err)

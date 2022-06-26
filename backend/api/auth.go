@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
+	"golang.org/x/crypto/bcrypt"
 )
 
 type UserErrorResponse struct {
@@ -13,15 +14,16 @@ type UserErrorResponse struct {
 }
 
 type User struct {
-	Nama     string `json:""nama   db:"nama"`
-	Email    string `json:"email"  db:"email"`
-	Password string `json:"password"  db:"password"`
-	Gender   string `json:"gender"    db:"gender"`
+	Nama     string `json:"nama"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+	Gender   string `json:"gender"`
+	No_hp    string `json:"no_hp"`
 }
 
 type LoginSuccessResponse struct {
-	Username string `json:"username"`
-	Token    string `json:"token"`
+	Email string `json:"email"`
+	Token string `json:"token"`
 }
 
 type AuthErrorResponse struct {
@@ -91,12 +93,11 @@ func (api *API) login(w http.ResponseWriter, req *http.Request) {
 		Path:    "/",
 	})
 
-	json.NewEncoder(w).Encode(LoginSuccessResponse{Username: res.Nama, Token: tokenString})
+	json.NewEncoder(w).Encode(LoginSuccessResponse{Email: res.Email, Token: tokenString})
 }
 
 func (api *API) logout(w http.ResponseWriter, req *http.Request) {
 	api.AllowOrigin(w, req)
-
 	token, err := req.Cookie("token")
 	if err != nil {
 		if err == http.ErrNoCookie {
@@ -138,7 +139,10 @@ func (api *API) register(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	err = api.userRepo.Register(user.Nama, user.Email, user.Password, user.Gender)
+	hash, _ := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+	convStr := string(hash)
+
+	err = api.userRepo.Register(user.Nama, user.Email, convStr, user.Gender, user.No_hp)
 	if err != nil {
 		w.WriteHeader(http.StatusUnauthorized)
 		w.Write([]byte("Error"))
@@ -146,5 +150,5 @@ func (api *API) register(w http.ResponseWriter, req *http.Request) {
 	}
 
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("Success"))
+	w.Write([]byte(user.Nama + " success register"))
 }

@@ -9,8 +9,8 @@ import (
 )
 
 func (api *API) AllowOrigin(w http.ResponseWriter, req *http.Request) {
-	// localhost:9000 origin mendapat ijin akses
-	w.Header().Set("Access-Control-Allow-Origin", "http://localhost:9000")
+	//semua origin diperbolehkan masuk
+	w.Header().Set("Access-Control-Allow-Origin", "*")
 	// semua method diperbolehkan masuk
 	w.Header().Set("Access-Control-Allow-Methods", "GET, POST")
 	// semua header diperbolehkan untuk disisipkan
@@ -73,24 +73,8 @@ func (api *API) AuthMiddleWare(next http.Handler) http.Handler {
 		}
 
 		ctx := context.WithValue(r.Context(), "email", claims.Email)
-		// ctx = context.WithValue(ctx, "role", claims.Role)
 		ctx = context.WithValue(ctx, "props", claims)
 		next.ServeHTTP(w, r.WithContext(ctx))
-	})
-}
-
-func (api *API) AdminMiddleware(next http.Handler) http.Handler {
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		api.AllowOrigin(w, r)
-		encoder := json.NewEncoder(w)
-		role := r.Context().Value("role")
-		if role != "admin" {
-			w.WriteHeader(http.StatusForbidden)
-			encoder.Encode(AuthErrorResponse{Error: "forbidden access"})
-			return
-		}
-
-		next.ServeHTTP(w, r)
 	})
 }
 
