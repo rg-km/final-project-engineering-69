@@ -25,7 +25,7 @@ function EditProfile() {
     e.preventDefault();
     const { nama,  gender, no_hp } = profile;
     axios
-      .post(`http://localhost:8080/api/user/profile/editprofile?email=${email}`, { nama, gender, no_hp })
+      .post(`http://localhost:8080/api/user/profile/editprofile?email=${email}`, { nama,email, gender, no_hp })
       .then(() => {
         alert("sukses");
         navigate("/profile");
