@@ -3,6 +3,8 @@ import Header from "../Header";
 import "./Profile.css";
 import { Link, useNavigate } from "react-router-dom";
 import ProfilePicture from "./assets/Profile/Profile-Picture.svg";
+import axios from "axios";
+import { useEffect } from "react";
 
 function Profile() {
   const navigate = useNavigate();
@@ -11,12 +13,22 @@ function Profile() {
     navigate("/editProfile");
   };
 
+  useEffect(() => {
+    try{
+    axios.get(`http://localhost:8080/api/user/profile?id=3`).then((res) => {
+      console.log(res);
+    });
+  } catch (error){
+    console.log(error);
+  }
+  });
+
   return (
     <div>
       <Header />
       <div className="contentProfile">
-        <div class="row align-items-start">
-          <div class="col">
+        <div className="row align-items-start">
+          <div className="col">
             <div className="left-containerProfile">
               <div className="left-contentProfile">
                 <img src={ProfilePicture} alt="Profile Picture" />
@@ -25,7 +37,7 @@ function Profile() {
               </div>
             </div>
           </div>
-          <div class="col">
+          <div className="col">
             <div className="mid-containerProfile">
               <div className="mid-contentProfile">
                 <h1 id="titleProfile">Profile Saya</h1>
@@ -42,7 +54,7 @@ function Profile() {
               </div>
             </div>
           </div>
-          <div class="col">
+          <div className="col">
             <div className="right-containerProfile">
               <form onSubmit={handleEditProfile}>
                 <button type="submit" id="editProfile">
