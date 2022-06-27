@@ -7,8 +7,16 @@
   top: 0;
   height: 8vh;
   width: 98.9vw;
+  z-index: 999;
 }
 
+.buttonLogout{
+  border: none;
+  background-color: #ffffff;
+}
+.buttonLogout:hover{
+  background-color: #ff8b56;
+}
 .spaceNavbar {
   width: 900px;
 }

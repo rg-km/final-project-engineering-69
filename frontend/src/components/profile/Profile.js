@@ -11,14 +11,16 @@ function Profile() {
   const handleEditProfile = () => {
     navigate("/editProfile");
   };
-  const [pesertaLomba, setPesertaLomba] = useState([]);
+  const [profile, setProfile] = useState([]);
+  const email = localStorage.getItem("email");
+  console.log(email);
 
   const fetchData = async () => {
-    const result = await axios.get(`http://localhost:8080/api/user/profile?id=5`);
+    const result = await axios.get(`http://localhost:8080/api/user/profile?email=${email}`);
     const data = result.data.profile;
     console.log(result.data);
 
-    setPesertaLomba(
+    setProfile(
       data.map((x) => {
         return {
           id: x.id,
@@ -44,7 +46,7 @@ function Profile() {
             <div className="left-containerProfile">
               <div className="left-contentProfile">
                 <img src={ProfilePicture} alt="Profile Picture" />
-                {pesertaLomba.map((item) => {
+                {profile.map((item) => {
                   return (
                     <div>
                       <p id="name-userProfile">{item.name}</p>
@@ -59,7 +61,7 @@ function Profile() {
             <div className="mid-containerProfile">
               <div className="mid-contentProfile">
                 <h1 id="titleProfile">Profile Saya</h1>
-                {pesertaLomba.map((item) => {
+                {profile.map((item) => {
                   return (
                     <form id="formProfile">
                       <h5>Nama</h5>

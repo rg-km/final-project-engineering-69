@@ -3,9 +3,15 @@ import Trainice from "./assets/Trainice.png";
 import Profil from "./assets/profile.png";
 import Setting from "./assets/setting.png";
 import Logout from "./assets/logout.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
+  function handleLogout(){
+    localStorage.clear();
+    navigate("/login");
+  }
   return (
     <div className="header">
       {/* NAVBAR AWAL*/}
@@ -52,10 +58,10 @@ function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link class="dropdown-item " to="/login">
+                    <a class="dropdown-item " href="">
                       <img class="m-1" src={Logout} alt="icon logout" />
-                      Keluar
-                    </Link>
+                      <button onClick={handleLogout} className="buttonLogout">Keluar</button>
+                    </a>
                   </li>
                 </ul>
               </li>

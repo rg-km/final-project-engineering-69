@@ -4,14 +4,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
- function RoomIndex() {
-  const [pesertaLomba, setPesertaLomba] = useState([]);
+function RoomIndex() {
+  const [data, setData] = useState([]);
+  const email = localStorage.getItem("email");
   const fetchData = async () => {
-    const result = await axios.get(`http://localhost:8080/api/user/dashboard?id=5`);
+    const result = await axios.get(`http://localhost:8080/api/user/dashboard?email=${email}`);
     const data = result.data.dashboard;
     console.log(result.data);
 
-    setPesertaLomba(
+    setData(
       data.map((x) => {
         return {
           name: x.name,
@@ -97,14 +98,13 @@ import { Link } from "react-router-dom";
           <div class="col">
             <div className="boxs text-center">
               <div className="link">
-                {pesertaLomba.map((item) => {
+                {data.map((item) => {
                   return (
                     <div>
                       <h2 className="mb-3">Hai, {item.name}</h2>
                     </div>
                   );
                 })}
-                <h1></h1>
                 <h4>Bahasa inggris untuk pemula</h4>
                 <p>Silahkan pilih topik yang disukai</p>
               </div>

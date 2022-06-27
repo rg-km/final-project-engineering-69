@@ -9,12 +9,13 @@ import axios from "axios";
 function EditProfile() {
   const navigate = useNavigate();
   const [profile, setProfile] = useState({
-    username: "",
+    nama: "",
     email: "",
-    password: "",
     gender: "",
     no_hp: "",
   });
+  const email = localStorage.getItem("email");
+  console.log(email);
 
   const handleChange = (e) => {
     setProfile({ ...profile, [e.target.name]: e.target.value });
@@ -23,9 +24,9 @@ function EditProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { username, email, password, gender, no_hp } = profile;
+    const { nama, email,  gender, no_hp } = profile;
     axios
-      .post("http://localhost:8080/api/user/profile/editprofile?id=5", { username, email, password, gender, no_hp })
+      .post(`http://localhost:8080/api/user/profile/editprofile?email=${email}`, { nama, email, gender, no_hp })
       .then(() => {
         alert("sukses");
         navigate("/profile");
@@ -34,7 +35,6 @@ function EditProfile() {
         console.log(err);
         alert("gagal update");
       });
-    
   };
 
   return (
@@ -51,10 +51,10 @@ function EditProfile() {
                 <div className="form-group">
                   <h1 className="mt-5">Edit Profil</h1>
                   <div className="form-inputs">
-                    <label htmlFor="username" className="form-label">
+                    <label htmlFor="nama" className="form-label">
                       Nama Lengkap
                     </label>
-                    <input type="text" name="username" className="form-input form-control form-control-sm" onChange={handleChange} />
+                    <input type="text" name="nama" className="form-input form-control form-control-sm" onChange={handleChange} />
                   </div>
                   <div className="form-inputs">
                     <label htmlFor="email" className="form-label">
@@ -63,16 +63,16 @@ function EditProfile() {
                     <input type="text" name="email" className="form-input form-control form-control-sm" onChange={handleChange} />
                   </div>
                   <div className="form-inputs">
-                    <label htmlFor="password" className="form-label">
+                    <label htmlFor="gender" className="form-label">
                       Gender
                     </label>
-                    <input type="" name="password" className="form-input form-control form-control-sm" onChange={handleChange} />
+                    <input type="" name="gender" className="form-input form-control form-control-sm" onChange={handleChange} />
                   </div>
                   <div className="form-inputs">
-                    <label htmlFor="password" className="form-label">
+                    <label htmlFor="no_hp" className="form-label">
                       No. Hp
                     </label>
-                    <input type="password" name="password" className="form-input form-control form-control-sm" onChange={handleChange} />
+                    <input type="text" name="no_hp" className="form-input form-control form-control-sm" onChange={handleChange} />
                   </div>
 
                   <button id="signup" type="submit" onClick={handleSubmit}>

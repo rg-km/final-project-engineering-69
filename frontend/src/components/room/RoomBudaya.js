@@ -5,14 +5,15 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function RoomBudaya() {
-  const [pesertaLomba, setPesertaLomba] = useState([]);
-  const title = "TOPIK BUDAYA"
+  const [data, setData] = useState([]);
+  const title = "Topik Budaya Indonesia"
+  const email = localStorage.getItem("email");
   const fetchData = async () => {
-    const result = await axios.get(`http://localhost:8080/api/user/dashboard?id=5`);
+    const result = await axios.get(`http://localhost:8080/api/user/dashboard?email=${email}`);
     const data = result.data.dashboard;
     console.log(result.data);
 
-    setPesertaLomba(
+    setData(
       data.map((x) => {
         return {
           name: x.name,
@@ -97,7 +98,7 @@ function RoomBudaya() {
         <div class="col">
           <div className="boxs text-center">
             <div className="link">
-              {pesertaLomba.map((item) => {
+              {data.map((item) => {
                 return (
                   <div>
                     <h2 className="mb-3">Hai, {item.name}</h2>

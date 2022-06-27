@@ -19,13 +19,16 @@ function Login() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     const { email, password } = login;
     console.log(email, password);
     axios
       .post("http://localhost:8080/api/user/login", { email, password })
       .then((res) => {
         let { data } = res;
-        Cookies.set("token", data.token, { expires: 4 });
+        console.log(data);
+        localStorage.setItem("email", data.email);
+        Cookies.set("user-info", data, { expires: 1 });
         alert("login sukses");
         navigate("/");
       })
