@@ -2,7 +2,7 @@ import Footer from "../Footer";
 import Header from "../Header";
 import "./Profile.css";
 import { Link, useNavigate } from "react-router-dom";
-import ProfilePicture from "./assets/Profile/Profile-Picture.svg";
+import ProfileImg from "./assets/Profile/Profile-Picture.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -16,7 +16,9 @@ function Profile() {
   console.log(email);
 
   const fetchData = async () => {
-    const result = await axios.get(`http://localhost:8080/api/user/profile?email=${email}`);
+    const result = await axios.get(
+      `http://localhost:8080/api/user/profile?email=${email}`
+    );
     const data = result.data.profile;
     console.log(result.data);
 
@@ -45,7 +47,7 @@ function Profile() {
           <div className="col">
             <div className="left-containerProfile">
               <div className="left-contentProfile">
-                <img src={ProfilePicture} alt="Profile Picture" />
+                <img src={ProfileImg} alt="Profile Picture" />
                 {profile.map((item) => {
                   return (
                     <div>
