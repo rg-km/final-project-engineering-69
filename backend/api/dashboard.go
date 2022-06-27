@@ -3,7 +3,6 @@ package api
 import (
 	"encoding/json"
 	"net/http"
-	"strconv"
 )
 
 type DashboardErrorResponse struct {
@@ -24,10 +23,9 @@ func (api *API) dashboard(w http.ResponseWriter, req *http.Request) {
 	response := DashboardSuccesResponse{}
 	response.Dashboard = make([]Dashboard, 0)
 
-	id := req.URL.Query().Get("id")
-	idInt, err := strconv.Atoi(id)
+	email := req.URL.Query().Get("email")
 
-	dashboard, err := api.userRepo.Dashboard(int64(idInt))
+	dashboard, err := api.userRepo.Dashboard(email)
 	defer func() {
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
