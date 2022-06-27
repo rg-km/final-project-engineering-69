@@ -5,6 +5,7 @@ import containerLeft from "./image/containerLeft.svg";
 import containerRight2 from "./image/containerRight2.svg";
 import "./content.css";
 import "../Kelas_Gratis/Kelas.css";
+import { Link } from "react-router-dom";
 
 function Content() {
   return (
@@ -43,12 +44,11 @@ function Content() {
         <div className="kotak row">
           <h4 className="col">Apakah kamu siap untuk memulai pembelajaran?</h4>
           <div className="grup-btn col">
-            <button className="btn-mulai" type="button">
-              Ayo mulai
-            </button>
-            <button className="btn-kontak" type="button">
-              Kontak Kami
-            </button>
+            <Link to="/room">
+              <button className="btn-mulai" type="button">
+                Ayo mulai
+              </button>
+            </Link>
           </div>
         </div>
       </div>

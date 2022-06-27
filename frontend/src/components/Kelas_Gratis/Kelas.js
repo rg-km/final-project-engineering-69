@@ -4,6 +4,7 @@ import Footer from "../Footer";
 import Header from "../Header";
 import Ok from "../assets/Ok.png";
 import Boy from "../assets/boy.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const Kelas = () => {
   return (
@@ -88,9 +89,6 @@ const Kelas = () => {
                   <img src={Ok} alt="logo ceklis" /> Dan lain-lain
                 </li>
               </ul>
-              <button className="btn-tanya" type="button">
-                Tanya Kami
-              </button>
             </div>
           </div>
         </div>
@@ -103,12 +101,11 @@ const Kelas = () => {
           <div className="kotak row">
             <h4 className="col">Cobalah sekarang juga</h4>
             <div className="grup-btn col">
-              <button className="btn-mulai" type="button">
-                Ayo mulai
-              </button>
-              <button className="btn-kontak" type="button">
-                Kontak Kami
-              </button>
+              <Link to="/room">
+                <button className="btn-mulai" type="button">
+                  Ayo mulai
+                </button>
+              </Link>
             </div>
           </div>
         </div>
