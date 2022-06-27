@@ -65,7 +65,7 @@ function Login() {
                 className="form-input form-control form-control-sm"
                 onChange={handleChange}
               />
-              <Link to="/forgotPassword" className="lupaPassword">
+              <Link to="/forgotPassword" className="lupaPassword fw-bold">
                 Lupa password?{" "}
               </Link>
             </div>
@@ -73,9 +73,9 @@ function Login() {
             <button id="signup" type="submit" onClick={handleSubmit}>
               Masuk
             </button>
-            <p className="form-input-login text-center">
+            <p className="form-input-login text-center fw-normal">
               Belum punya akun?{" "}
-              <Link to="/registrasi" className="daftar">
+              <Link to="/registrasi" className="daftar fw-bolder">
                 {" "}
                 Daftar disini
               </Link>
