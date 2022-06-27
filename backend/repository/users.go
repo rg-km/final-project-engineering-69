@@ -91,9 +91,9 @@ func (u *UserRepository) CheckUser(email string) (string, error) {
 	return user.Email, nil
 }
 
-func (p *UserRepository) GetProfile(id int64) (User, error) {
+func (p *UserRepository) GetProfile(email string) (User, error) {
 	var users User
-	err := p.db.QueryRow("SELECT * FROM users WHERE id = ?", id).Scan(&users.ID, &users.Nama, &users.Email, &users.Password, &users.Gender, &users.No_hp)
+	err := p.db.QueryRow("SELECT * FROM users WHERE email = ?", email).Scan(&users.ID, &users.Nama, &users.Email, &users.Password, &users.Gender, &users.No_hp)
 	if err != nil {
 		return users, err
 	}
