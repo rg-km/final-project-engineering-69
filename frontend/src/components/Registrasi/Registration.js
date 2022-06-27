@@ -8,7 +8,7 @@ import { useState } from "react";
 const Registration = () => {
   const navigate = useNavigate();
   const [register, setRegister] = useState({
-    username: "",
+    nama: "",
     email: "",
     password: "",
     gender: "",
@@ -21,10 +21,10 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { username, email, password, gender, no_hp } = register;
+    const { nama, email, password, gender, no_hp } = register;
     console.log(register);
     axios
-      .post("http://localhost:8080/api/user/register", { username, email, password, gender, no_hp })
+      .post("http://localhost:8080/api/user/register", { nama, email, password, gender, no_hp })
       .then(() => {
         alert("sukses");
         navigate("/login");
@@ -41,10 +41,10 @@ const Registration = () => {
           <div className="form-group">
             <img id="logo" src={Trainice} alt="Logo Trainice" />
             <div className="form-inputs">
-              <label htmlFor="username" className="form-label">
+              <label htmlFor="nama" className="form-label">
                 Nama Lengkap
               </label>
-              <input type="text" name="username" className="form-input form-control form-control-sm" onChange={handleChange} />
+              <input type="text" name="nama" className="form-input form-control form-control-sm" onChange={handleChange} />
             </div>
             <div className="form-inputs">
               <label htmlFor="email" className="form-label">
