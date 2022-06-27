@@ -25,9 +25,9 @@ function Login() {
       .post("http://localhost:8080/api/user/login", { email, password })
       .then((res) => {
         let { data } = res;
-        Cookies.set("token", data.token, { expires: 1 });
+        Cookies.set("token", data.token, { expires: 4 });
         alert("login sukses");
-        // navigate("/");
+        navigate("/");
       })
       .catch((err) => {
         console.log(err.response);
@@ -35,11 +35,6 @@ function Login() {
       });
   };
 
-  useEffect(() => {
-    if (localStorage.getItem("user-info")) {
-      navigate("/");
-    }
-  });
 
   return (
     <div className="fluid-container row wrap">

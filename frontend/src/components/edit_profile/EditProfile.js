@@ -3,13 +3,40 @@ import Header from "../Header";
 import "./EditProfile.css";
 import { Link, useNavigate } from "react-router-dom";
 import EditProfileImage from "./assets/EditProfile/EditProfileImage.svg";
+import { useState } from "react";
+import axios from "axios";
 
 function EditProfile() {
   const navigate = useNavigate();
+  const [profile, setProfile] = useState({
+    username: "",
+    email: "",
+    password: "",
+    gender: "",
+    no_hp: "",
+  });
 
-  const handleSubmitEditProfile = () => {
-    navigate("/profile");
+  const handleChange = (e) => {
+    setProfile({ ...profile, [e.target.name]: e.target.value });
+    console.log(profile);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { username, email, password, gender, no_hp } = profile;
+    axios
+      .post("http://localhost:8080/api/user/profile/editprofile?id=5", { username, email, password, gender, no_hp })
+      .then(() => {
+        alert("sukses");
+        navigate("/profile");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("gagal update");
+      });
+    
+  };
+
   return (
     <>
       <Header />
@@ -20,50 +47,44 @@ function EditProfile() {
           </div>
           <div className="mid-container">
             <div className="mid-content">
-              <h5>Gustio Nusamba</h5>
-              <p>gusti2480@gmail.com</p>
-              <form>
-                <label for="name">Nama</label>
-                <br />
-                <input type="text" id="name" name="name" />
-                <br />
-                <label for="email">Email</label>
-                <br />
-                <input type="email" id="email" name="email" />
-                <br />
-                <label for="hp">No. HP</label>
-                <br />
-                <input type="number" id="hp" name="hp" />
+              <form className="form">
+                <div className="form-group">
+                  <h1 className="mt-5">Edit Profil</h1>
+                  <div className="form-inputs">
+                    <label htmlFor="username" className="form-label">
+                      Nama Lengkap
+                    </label>
+                    <input type="text" name="username" className="form-input form-control form-control-sm" onChange={handleChange} />
+                  </div>
+                  <div className="form-inputs">
+                    <label htmlFor="email" className="form-label">
+                      Email
+                    </label>
+                    <input type="text" name="email" className="form-input form-control form-control-sm" onChange={handleChange} />
+                  </div>
+                  <div className="form-inputs">
+                    <label htmlFor="password" className="form-label">
+                      Gender
+                    </label>
+                    <input type="" name="password" className="form-input form-control form-control-sm" onChange={handleChange} />
+                  </div>
+                  <div className="form-inputs">
+                    <label htmlFor="password" className="form-label">
+                      No. Hp
+                    </label>
+                    <input type="password" name="password" className="form-input form-control form-control-sm" onChange={handleChange} />
+                  </div>
+
+                  <button id="signup" type="submit" onClick={handleSubmit}>
+                    Simpan Perubahan
+                  </button>
+                </div>
               </form>
             </div>
           </div>
           <div className="right-container">
-            <div className="right-content">
-              <form>
-                <p id="gender">Gender</p>
-                <input type="radio" id="laki" name="gender" value="laki" />
-                <label for="laki" class="gender-label">
-                  Laki-laki
-                </label>
-                <input type="radio" id="perempuan" name="gender" value="perempuan" />
-                <label for="perempuan" class="gender-label">
-                  Perempuan
-                </label>
-                <br />
-                <label for="password" id="password-label">
-                  Password
-                </label>
-                <br />
-                <input type="password" id="password" name="password" />
-                <br />
-              </form>
-            </div>
+            <div className="right-content"></div>
           </div>
-        </div>
-        <div className="form-submit">
-          <form onSubmit={handleSubmitEditProfile}>
-            <input type="submit" id="submit" value="Simpan Perubahan" />
-          </form>
         </div>
       </div>
       <Footer />

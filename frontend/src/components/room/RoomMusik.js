@@ -1,24 +1,37 @@
 import "./room.css";
 import study from "./image/Study.svg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
-function Room() {
-  useEffect(() => {
-    axios
-      .get("http://localhost:8080/api/user/dashboard")
-      .then((res) => {
-        console.log(res);
+function RoomMusik() {
+  const [pesertaLomba, setPesertaLomba] = useState([]);
+  const fetchData = async () => {
+    const result = await axios.get(`http://localhost:8080/api/user/dashboard?id=5`);
+    const data = result.data.dashboard;
+    console.log(result.data);
+
+    setPesertaLomba(
+      data.map((x) => {
+        return {
+          name: x.name,
+        };
       })
+    );
+  };
+  useEffect(() => {
+    fetchData();
   });
   return (
     <div className="room">
       <nav class="navbar">
         <div class="container-fluid">
           <a class="navbar-brand text-dark fw-bold fs-4">Class</a>
-          <button className="buttonContainer me-5" type="button">
-            Kembali
-          </button>
+          <Link to="/">
+            <button className="buttonContainer me-5" type="button">
+              Kembali
+            </button>
+          </Link>
         </div>
       </nav>
       <div class="row ">
@@ -30,7 +43,9 @@ function Room() {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title mt-4 ms-5">Topik Pekerjaan</h5>
+                  <Link to="/room-sport">
+                    <h5 class="card-title mt-4 ms-5">Topik Sport</h5>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -42,7 +57,9 @@ function Room() {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title mt-4 ms-5">Topik Pekerjaan</h5>
+                  <Link to="/room-game">
+                    <h5 class="card-title mt-4 ms-5">Topik Game</h5>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -54,7 +71,9 @@ function Room() {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title mt-4 ms-5">Topik Pekerjaan</h5>
+                  <Link to="/room-musik">
+                    <h5 class="card-title mt-4 ms-5">Topik Musik</h5>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -66,7 +85,9 @@ function Room() {
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title mt-4 ms-5">Topik Pekerjaan</h5>
+                  <Link to="/room-budaya">
+                    <h5 class="card-title mt-4 ms-5">Topik Budaya Indonesia</h5>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -75,10 +96,17 @@ function Room() {
         <div class="col">
           <div className="boxs text-center">
             <div className="link">
+              {pesertaLomba.map((item) => {
+                return (
+                  <div>
+                    <h2 className="mb-3">Hai, {item.name}</h2>
+                  </div>
+                );
+              })}
               <h1></h1>
               <h4>Bahasa inggris untuk pemula</h4>
               <p>join pada link berikut:</p>
-              <a href="meet.google.com/gks-jixn-bmr">meet.google.com/gks-jixn-bmr</a>
+              <a href="https://meet.google.com/mvo-nzvw-jha">Klik disini untuk memulai</a>
             </div>
           </div>
         </div>
@@ -86,4 +114,4 @@ function Room() {
     </div>
   );
 }
-export default Room;
+export default RoomMusik;

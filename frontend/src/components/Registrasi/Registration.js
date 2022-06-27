@@ -11,6 +11,8 @@ const Registration = () => {
     username: "",
     email: "",
     password: "",
+    gender: "",
+    no_hp: ""
   });
 
   const handleChange = (e) => {
@@ -19,10 +21,10 @@ const Registration = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { username, email, password } = register;
+    const { username, email, password, gender, no_hp } = register;
     console.log(register);
     axios
-      .post("http://localhost:8080/api/user/register", { username, email, password })
+      .post("http://localhost:8080/api/user/register", { username, email, password, gender, no_hp })
       .then(() => {
         alert("sukses");
         navigate("/login");
@@ -55,6 +57,18 @@ const Registration = () => {
                 Password
               </label>
               <input type="password" name="password" className="form-input form-control form-control-sm" onChange={handleChange} />
+            </div>
+            <div className="form-inputs">
+              <label htmlFor="password" className="form-label">
+                Gender
+              </label>
+              <input type="" name="gender" className="form-input form-control form-control-sm" onChange={handleChange} />
+            </div>
+            <div className="form-inputs">
+              <label htmlFor="password" className="form-label">
+                No. Hp
+              </label>
+              <input type="text" name="no_hp" className="form-input form-control form-control-sm" onChange={handleChange} />
             </div>
 
             <button id="signup" type="submit" onClick={handleSubmit}>

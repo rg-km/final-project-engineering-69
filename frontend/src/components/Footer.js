@@ -45,12 +45,6 @@ function Footer() {
             </p>
           </div>
           <div class="col text-white my-5">
-            <h5>Bahasa Kelas Reguler</h5>
-            <p>inggris</p>
-            <h5>Bahasa Kelas Anak</h5>
-            <p>inggris</p>
-            <h5>Bahasa Kelas Karyawan</h5>
-            <p>inggris</p>
             <h5>Bahasa Kelas Gratis</h5>
             <p>inggris</p>
           </div>
