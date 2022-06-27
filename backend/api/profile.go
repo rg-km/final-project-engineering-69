@@ -3,7 +3,6 @@ package api
 import (
 	"encoding/json"
 	"net/http"
-	"strconv"
 )
 
 type ProfileErrorResponse struct {
@@ -43,10 +42,9 @@ func (api *API) profile(w http.ResponseWriter, req *http.Request) {
 	response := ProfileSuccesResponse{}
 	response.Profile = make([]Profile, 0)
 
-	id := req.URL.Query().Get("id")
-	idInt, err := strconv.Atoi(id)
+	email := req.URL.Query().Get("email")
 
-	profile, err := api.userRepo.GetProfile(int64(idInt))
+	profile, err := api.userRepo.GetProfile(email)
 	defer func() {
 		if err != nil {
 			w.WriteHeader(http.StatusBadRequest)
