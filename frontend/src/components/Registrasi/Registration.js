@@ -107,7 +107,7 @@ const Registration = () => {
             </button>
             <p className="form-input-login text-center">
               Sudah punya akun?{" "}
-              <Link to="/login" className="daftar">
+              <Link to="/login" className="daftar fw-bold">
                 {" "}
                 Login disini
               </Link>
