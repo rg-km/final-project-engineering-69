@@ -39,7 +39,6 @@ function Header() {
                 </Link>
               </li>
               <div className="spaceNavbar"></div>
-
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                   <img src={Profil} alt="profil" />

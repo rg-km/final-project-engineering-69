@@ -10,7 +10,6 @@ function EditProfile() {
   const navigate = useNavigate();
   const [profile, setProfile] = useState({
     nama: "",
-    email: "",
     gender: "",
     no_hp: "",
   });
@@ -24,9 +23,9 @@ function EditProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { nama, email,  gender, no_hp } = profile;
+    const { nama,  gender, no_hp } = profile;
     axios
-      .post(`http://localhost:8080/api/user/profile/editprofile?email=${email}`, { nama, email, gender, no_hp })
+      .post(`http://localhost:8080/api/user/profile/editprofile?email=${email}`, { nama, gender, no_hp })
       .then(() => {
         alert("sukses");
         navigate("/profile");
@@ -56,12 +55,12 @@ function EditProfile() {
                     </label>
                     <input type="text" name="nama" className="form-input form-control form-control-sm" onChange={handleChange} />
                   </div>
-                  <div className="form-inputs">
+                  {/* <div className="form-inputs">
                     <label htmlFor="email" className="form-label">
                       Email
                     </label>
                     <input type="text" name="email" className="form-input form-control form-control-sm" onChange={handleChange} />
-                  </div>
+                  </div> */}
                   <div className="form-inputs">
                     <label htmlFor="gender" className="form-label">
                       Gender
