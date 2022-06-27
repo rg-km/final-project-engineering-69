@@ -60,8 +60,6 @@ func (api *API) login(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	// userRole, _ := api.userRepo.FetchUserRole(*res)
-
 	// Deklarasi expiry time untuk token jwt
 	expirationTime := time.Now().Add(60 * time.Minute)
 
