@@ -23,9 +23,12 @@ function EditProfile() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { nama,  gender, no_hp } = profile;
+    const { nama, gender, no_hp } = profile;
     axios
-      .post(`http://localhost:8080/api/user/profile/editprofile?email=${email}`, { nama,email, gender, no_hp })
+      .post(
+        `http://localhost:8080/api/user/profile/editprofile?email=${email}`,
+        { nama, email, gender, no_hp }
+      )
       .then(() => {
         alert("sukses");
         navigate("/profile");
@@ -53,7 +56,12 @@ function EditProfile() {
                     <label htmlFor="nama" className="form-label">
                       Nama Lengkap
                     </label>
-                    <input type="text" name="nama" className="form-input form-control form-control-sm" onChange={handleChange} />
+                    <input
+                      type="text"
+                      name="nama"
+                      className="form-input form-control form-control-sm"
+                      onChange={handleChange}
+                    />
                   </div>
                   {/* <div className="form-inputs">
                     <label htmlFor="email" className="form-label">
@@ -65,13 +73,23 @@ function EditProfile() {
                     <label htmlFor="gender" className="form-label">
                       Gender
                     </label>
-                    <input type="" name="gender" className="form-input form-control form-control-sm" onChange={handleChange} />
+                    <input
+                      type=""
+                      name="gender"
+                      className="form-input form-control form-control-sm"
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className="form-inputs">
                     <label htmlFor="no_hp" className="form-label">
                       No. Hp
                     </label>
-                    <input type="text" name="no_hp" className="form-input form-control form-control-sm" onChange={handleChange} />
+                    <input
+                      type="text"
+                      name="no_hp"
+                      className="form-input form-control form-control-sm"
+                      onChange={handleChange}
+                    />
                   </div>
 
                   <button id="signup" type="submit" onClick={handleSubmit}>
